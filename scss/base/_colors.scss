@@ -1,0 +1,70 @@
+$palettes: (
+    base: (
+      primary: #2cccc3,
+      secondary: #facd3d,
+      highlight: #e60576,
+      quiet: #beb7a4,
+      loud: #ff1b1c,
+      link: #0000FF,
+      visited: #800080
+    ),
+    type: (
+      ww: #fff,
+      bb: #000,
+      gg: #AAA
+    ),
+    primary: (
+      base: blue,
+      light: lighten(blue, 15%),
+      lighter: lighten(blue, 30%),
+      dark: darken(blue, 15%),
+      darker: darken(blue, 30%)
+    ),
+    secondary: (
+      base:   #ffa949,
+      light: lighten(#ffa949, 15%),
+      lighter: lighten(#ffa949, 30%),
+      dark: darken(#ffa949, 15%),
+      darker: darken(#ffa949, 30%)
+    ),
+    highlight: (
+      base: #DD4132,
+      light: lighten(#DD4132, 15%),
+      lighter: lighten(#DD4132, 30%),
+      dark: darken(#DD4132, 15%),
+      darker: darken(#DD4132, 30%)
+    ),
+    quiet: (
+      base: blue,
+      light: lighten(blue, 15%),
+      lighter: lighten(blue, 30%),
+      dark: darken(blue, 15%),
+      darker: darken(blue, 30%)
+    ),
+    loud: (
+      base: blue,
+      light: lighten(blue, 15%),
+      lighter: lighten(blue, 30%),
+      dark: darken(blue, 15%),
+      darker: darken(blue, 30%)
+    ),
+    bcss: (
+      white: #ffffff,
+      black: #111111,
+      gray: #AAAAAA,
+      silver: #DDDDDD,
+      blue: #0074D9,
+      aqua: #7FDBFF,
+      navy: #001f3f,
+      teal: #39CCCC,
+      olive: #3D9970,
+      green: #2ECC40,
+      lime: #01FF70,
+      Yellow: #FFDC00,
+      orange: #FF851B,
+      red: #FF4136,
+      maroon: #85144b,
+      fuchsia: #F012BE,
+      purple:  #B10DC9,
+    )
+);

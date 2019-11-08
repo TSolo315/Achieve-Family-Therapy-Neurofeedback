@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald|Quattrocento");
+
+$heading-font-family: 'Oswald', sans-serif;
+$heading-font-weight: 500;
+
+$body-font-family: 'Quattrocento', serif;
+$body-font-weight: 400;
+
+$body-font-size: 16px;
+$body-line-height: 1.5;
+
+$font-light: 300;
+$font-normal: 400;
+$font-semibold: 500;
+$font-bold: 700;
+
+$ratio: 1.25;
+
+$h6-size: $body-font-size * $ratio;
+$h5-size: $h6-size * $ratio;
+$h4-size: $h5-size * $ratio;
+$h3-size: $h4-size * $ratio;
+$h2-size: $h3-size * $ratio;
+$h1-size: $h2-size * $ratio;
