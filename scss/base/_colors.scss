@@ -1,12 +1,16 @@
 $palettes: (
     base: (
-      primary: #2cccc3,
-      secondary: #facd3d,
-      highlight: #e60576,
-      quiet: #beb7a4,
-      loud: #ff1b1c,
-      link: #0000FF,
-      visited: #800080
+      primary: #3B8BEB,
+      secondary: #B23850,
+      highlight: #E7E3D4,
+      quiet: #C4DBF6,
+      loud: #8590AA
+    ),
+    links: (
+      link: #0000EE,
+      visited: #551A8B,
+      hover: #800080,
+      active: #EE0000
     ),
     type: (
       ww: #fff,
@@ -14,57 +18,57 @@ $palettes: (
       gg: #AAA
     ),
     primary: (
-      base: blue,
-      light: lighten(blue, 15%),
-      lighter: lighten(blue, 30%),
-      dark: darken(blue, 15%),
-      darker: darken(blue, 30%)
+      base: #3B8BEB,
+      light: lighten(#3B8BEB, 15%),
+      lighter: lighten(#3B8BEB, 30%),
+      dark: darken(#3B8BEB, 15%),
+      darker: darken(#3B8BEB, 30%)
     ),
     secondary: (
-      base:   #ffa949,
-      light: lighten(#ffa949, 15%),
-      lighter: lighten(#ffa949, 30%),
-      dark: darken(#ffa949, 15%),
-      darker: darken(#ffa949, 30%)
+      base:   #B23850,
+      light: lighten(#B23850, 15%),
+      lighter: lighten(#B23850, 30%),
+      dark: darken(#B23850, 15%),
+      darker: darken(#B23850, 30%)
     ),
     highlight: (
-      base: #DD4132,
-      light: lighten(#DD4132, 15%),
-      lighter: lighten(#DD4132, 30%),
-      dark: darken(#DD4132, 15%),
-      darker: darken(#DD4132, 30%)
+      base: #E7E3D4,
+      light: lighten(#E7E3D4, 15%),
+      lighter: lighten(#E7E3D4, 30%),
+      dark: darken(#E7E3D4, 15%),
+      darker: darken(#E7E3D4, 30%)
     ),
     quiet: (
-      base: blue,
-      light: lighten(blue, 15%),
-      lighter: lighten(blue, 30%),
-      dark: darken(blue, 15%),
-      darker: darken(blue, 30%)
+      base: #C4DBF6,
+      light: lighten(#C4DBF6, 15%),
+      lighter: lighten(#C4DBF6, 30%),
+      dark: darken(#C4DBF6, 15%),
+      darker: darken(#C4DBF6, 30%)
     ),
     loud: (
-      base: blue,
-      light: lighten(blue, 15%),
-      lighter: lighten(blue, 30%),
-      dark: darken(blue, 15%),
-      darker: darken(blue, 30%)
+      base: #8590AA,
+      light: lighten(#8590AA, 15%),
+      lighter: lighten(#8590AA, 30%),
+      dark: darken(#8590AA, 15%),
+      darker: darken(#8590AA, 30%)
     ),
     bcss: (
-      white: #ffffff,
-      black: #111111,
-      gray: #AAAAAA,
-      silver: #DDDDDD,
-      blue: #0074D9,
-      aqua: #7FDBFF,
-      navy: #001f3f,
-      teal: #39CCCC,
-      olive: #3D9970,
-      green: #2ECC40,
-      lime: #01FF70,
-      Yellow: #FFDC00,
-      orange: #FF851B,
-      red: #FF4136,
-      maroon: #85144b,
-      fuchsia: #F012BE,
-      purple:  #B10DC9,
+      bcsswhite: #ffffff,
+      bcssblack: #111111,
+      bcssgray: #AAAAAA,
+      bcsssilver: #DDDDDD,
+      bcssblue: #0074D9,
+      bcssaqua: #7FDBFF,
+      bcssnavy: #001f3f,
+      bcssteal: #39CCCC,
+      bcssolive: #3D9970,
+      bcssgreen: #2ECC40,
+      bcsslime: #01FF70,
+      bcssyellow: #FFDC00,
+      bcssorange: #FF851B,
+      bcssred: #FF4136,
+      bcssmaroon: #85144b,
+      bcssfuchsia: #F012BE,
+      bcsspurple:  #B10DC9,
     )
 );

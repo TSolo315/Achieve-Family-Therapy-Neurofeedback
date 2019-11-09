@@ -26,6 +26,21 @@ body {
   font-family: $body-font-family;
   letter-spacing: 0.04em;
 
+  a {
+    &:link {
+      color: color('links', 'link');
+    }
+    &:visited {
+      color: color('links', 'visited');
+    }
+    &:hover {
+      color: color('links', 'hover');
+    }
+    &:active {
+      color: color('links', 'active');
+    }
+  }
+
   h4 {
     font-size: $h6-size;
     font-family: $heading-font-family;
