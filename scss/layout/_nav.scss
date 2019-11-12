@@ -4,7 +4,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: rgba(color('base', 'quiet'), 0.70);
+  background-color: rgba(color('base', 'quiet'), 0.77);
   padding: 0 4em 0 4em;
   width: 100%;
   height: 64px;
@@ -27,11 +27,11 @@
 
     &:hover {
       transform: translate(0px, -.25em);
-      color: color('base', 'highlight');
+      color: color('loud', 'dark');
     }
 
    &.active {
-     color: color('base', 'highlight');
+     color: color('loud', 'dark');
      font-weight: $font-bold;
    }
   }

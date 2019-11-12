@@ -181,7 +181,6 @@ html {
 
 html,
 body {
-  background-color: #000;
   color: #fff;
   width: 100%;
   height: 100%;
@@ -201,14 +200,6 @@ body a:link {
 
 body a:visited {
   color: #551A8B;
-}
-
-body a:hover {
-  color: #800080;
-}
-
-body a:active {
-  color: #EE0000;
 }
 
 body h4 {
@@ -256,40 +247,43 @@ body h1 {
 }
 
 .container {
-  width: calc(100% - 2em);
+  width: calc(100% - 4.5em);
   max-width: 1170px;
   margin: 0 auto;
   border: 0;
 }
 
-.card-container {
-  color: #000;
-  background-color: #1B2735;
-  border: double 3.5px;
-  border-color: white;
-  opacity: 1;
-  -webkit-box-shadow: 0 2px 2px 0 white;
-          box-shadow: 0 2px 2px 0 white;
-  height: 450px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  margin: 0 auto;
-  max-width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.card {
+  width: 100%;
 }
 
-.card-container:hover {
-  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+.red-divide {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: url("/images/reddiv425x175long.png") no-repeat left center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .red-divide {
+    background: url("/images/reddiv800x175.png") no-repeat left center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 992px) {
+  .red-divide {
+    background: url("/images/reddiv2000x300.png") no-repeat left center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 2000px) {
+  .red-divide {
+    display: none;
+  }
 }
 
 .ghost-button {
@@ -317,7 +311,7 @@ body h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(196, 219, 246, 0.7);
+  background-color: rgba(196, 219, 246, 0.77);
   padding: 0 4em 0 4em;
   width: 100%;
   height: 64px;
@@ -346,11 +340,11 @@ body h1 {
 .navbar--link:hover {
   -webkit-transform: translate(0px, -0.25em);
           transform: translate(0px, -0.25em);
-  color: #E7E3D4;
+  color: #5d6985;
 }
 
 .navbar--link.active {
-  color: #E7E3D4;
+  color: #5d6985;
   font-weight: 700;
 }
 
@@ -480,5 +474,23 @@ body h1 {
   transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hero--container {
+  height: 100%;
+  margin-top: 64px;
+}
+
+.second {
+  height: 150%;
+  background-color: #3B8BEB;
+  padding-bottom: 200px;
+  position: relative;
+}
+
+.third {
+  height: 100%;
+  background-color: #B23850;
+  position: relative;
 }
 /*# sourceMappingURL=main.min.css.map */

@@ -13,7 +13,7 @@ box-sizing: inherit;
 
 html,
 body {
-  background-color: #000;
+  // background-color: #000;
   color: #fff;
   width: 100%;
   height: 100%;
@@ -33,12 +33,12 @@ body {
     &:visited {
       color: color('links', 'visited');
     }
-    &:hover {
-      color: color('links', 'hover');
-    }
-    &:active {
-      color: color('links', 'active');
-    }
+    // &:hover {
+    //   color: color('links', 'hover');
+    // }
+    // &:active {
+    //   color: color('links', 'active');
+    // }
   }
 
   h4 {
