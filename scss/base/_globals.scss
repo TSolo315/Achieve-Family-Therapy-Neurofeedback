@@ -65,7 +65,7 @@ body {
     font-weight: $heading-font-weight;
   }
 
-  @media (min-width: 40em) {
+  @include breakpoint('larger') {
     h4 {
     font-size: $h4-size;
     }
@@ -84,4 +84,7 @@ body {
   }
 }
 
+.hidden {
+  display: none;
+}
 

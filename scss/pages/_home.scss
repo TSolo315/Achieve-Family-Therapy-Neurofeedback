@@ -1,12 +1,36 @@
 .second {
-  height: 150%;
-  background-color: color('base', 'primary');
-  padding-bottom: 200px;
-  position: relative
+  height: 1280px;
+  background-color: color('base', 'secondary');
+  position: relative;
+  // padding-bottom: 175px
 }
 
 .third {
-  height: 100%;
-  background-color: color('base', 'secondary');
+  height: 1080px;
+  background-color: color('base', 'primary');
   position: relative
+}
+
+.head-wrapper {
+  display: inline-block;
+
+  &.top {
+  margin-left: 14em;
+
+  @include breakpoint('larger') {
+    margin-left: 18em;
+  }
+  }
+}
+
+.text-wrapper {
+  margin-left: 6em;
+  margin-top: 2em;
+  text-align: center;
+
+  p {
+    font-size: 22px;
+    text-align: left;
+    margin-top: 1em;
+  }
 }

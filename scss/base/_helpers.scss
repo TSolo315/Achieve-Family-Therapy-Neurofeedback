@@ -1,0 +1,15 @@
+.add-padding-top {
+  padding-top: 2em;
+}
+
+.add-extra-padding-top {
+  padding-top: 4em;
+}
+
+.add-max-padding-top {
+  padding-top: 8em;
+}
+
+.addflex {
+  @include flexAllCenterRow();
+}
