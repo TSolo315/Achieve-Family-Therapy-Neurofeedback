@@ -25,6 +25,7 @@ body {
   line-height: $body-line-height;
   font-family: $body-font-family;
   letter-spacing: 0.04em;
+  overflow-x: hidden;
 
   a {
     &:link {
@@ -82,9 +83,5 @@ body {
     font-size: $h1-size;
     }
   }
-}
-
-.hidden {
-  display: none;
 }
 

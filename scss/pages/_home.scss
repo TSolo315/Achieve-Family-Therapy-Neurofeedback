@@ -1,36 +1,92 @@
 .second {
-  height: 1280px;
+  height: 100%;
   background-color: color('base', 'secondary');
   position: relative;
-  // padding-bottom: 175px
+  padding-bottom: 175px;
+
+  @include breakpoint('larger') {
+    height: 110%;
+  }
 }
 
 .third {
-  height: 1080px;
+  height: 100%;
   background-color: color('base', 'primary');
   position: relative
 }
 
-.head-wrapper {
-  display: inline-block;
-
-  &.top {
-  margin-left: 14em;
+.head1 {
+  display: none;
 
   @include breakpoint('larger') {
-    margin-left: 18em;
-  }
+    display: block;
   }
 }
 
+.head2 {
+  display: block;
+  
+  @include breakpoint('larger') {
+    display: none;
+  }
+}
+
+.head-wrapper {
+  margin-right: 1em;
+}
+
 .text-wrapper {
-  margin-left: 6em;
   margin-top: 2em;
   text-align: center;
 
   p {
-    font-size: 22px;
     text-align: left;
-    margin-top: 1em;
+    margin-top: .5em;
+
+    @include breakpoint('larger') {
+      font-size: 18px;
+    }
   }
+}
+
+.reactive-icon-box {
+  background: color('base', 'quiet');
+  position: relative;
+  // border-style: dotted;
+  border-top: dotted 2px;
+  border-bottom: dotted 2px;
+  border-color: black;
+  width: 80%;
+  height: 30em;
+  margin: 0 auto;
+}
+
+.circle-base {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  border-radius: 50%;
+}
+
+.circle1 {
+  width: 125px;
+  height: 125px;
+  background: red;
+  border: 3px solid green;
+}
+
+.circle-trans1 {
+  transform: translate(80%, 45%);
+}
+.circle-trans2 {
+  transform: translate(-80%, 45%);
+}
+.circle-trans3 {
+  transform: translate(100%, -80%);
+}
+.circle-trans4 {
+  transform: translate(-100%, -80%);
+}
+.circle-trans5 {
+  transform: translate(0%, -165%);
 }

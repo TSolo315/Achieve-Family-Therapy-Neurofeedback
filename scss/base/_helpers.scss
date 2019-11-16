@@ -10,6 +10,30 @@
   padding-top: 8em;
 }
 
+.add-margin-top {
+  margin-top: 2em;
+}
+
+.add-extra-margin-top {
+  margin-top: 4em;
+}
+
+.add-max-margin-top {
+  margin-top: 8em;
+}
+
 .addflex {
   @include flexAllCenterRow();
+}
+
+.addflex--end {
+  @include flexStyle(row, null, flex-end, null, center)
+}
+
+.addflex--start {
+  @include flexStyle(row, null, flex-start, null, null)
+}
+
+.hidden {
+  display: none;
 }

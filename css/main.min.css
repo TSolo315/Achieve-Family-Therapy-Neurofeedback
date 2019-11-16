@@ -192,6 +192,7 @@ body {
   line-height: 1.5;
   font-family: "Merriweather", serif;
   letter-spacing: 0.04em;
+  overflow-x: hidden;
 }
 
 body a:link {
@@ -241,10 +242,6 @@ body h1 {
   }
 }
 
-.hidden {
-  display: none;
-}
-
 .add-padding-top {
   padding-top: 2em;
 }
@@ -255,6 +252,18 @@ body h1 {
 
 .add-max-padding-top {
   padding-top: 8em;
+}
+
+.add-margin-top {
+  margin-top: 2em;
+}
+
+.add-extra-margin-top {
+  margin-top: 4em;
+}
+
+.add-max-margin-top {
+  margin-top: 8em;
 }
 
 .addflex {
@@ -269,6 +278,38 @@ body h1 {
           align-items: Center;
   -ms-flex-line-pack: Center;
       align-content: Center;
+}
+
+.addflex--end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.addflex--start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.hidden {
+  display: none;
 }
 
 .content {
@@ -291,6 +332,12 @@ body h1 {
   height: auto;
   fill: #3b8beb;
   stroke: none;
+}
+
+@media (min-width: 2000px) {
+  #blue-curve {
+    display: none;
+  }
 }
 
 .ghost-button {
@@ -489,9 +536,16 @@ body h1 {
 }
 
 .second {
-  height: 1280px;
+  height: 1000px;
   background-color: #B23850;
   position: relative;
+  padding-bottom: 175px;
+}
+
+@media (min-width: 1200px) {
+  .second {
+    height: 1080px;
+  }
 }
 
 .third {
@@ -500,29 +554,93 @@ body h1 {
   position: relative;
 }
 
-.head-wrapper {
-  display: inline-block;
-}
-
-.head-wrapper.top {
-  margin-left: 14em;
+.head1 {
+  display: none;
 }
 
 @media (min-width: 1200px) {
-  .head-wrapper.top {
-    margin-left: 18em;
+  .head1 {
+    display: block;
   }
 }
 
+.head2 {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .head2 {
+    display: none;
+  }
+}
+
+.head-wrapper {
+  margin-right: 1em;
+}
+
 .text-wrapper {
-  margin-left: 6em;
   margin-top: 2em;
   text-align: center;
 }
 
 .text-wrapper p {
-  font-size: 22px;
   text-align: left;
-  margin-top: 1em;
+  margin-top: .5em;
+}
+
+@media (min-width: 1200px) {
+  .text-wrapper p {
+    font-size: 18px;
+  }
+}
+
+.reactive-icon-box {
+  background: #C4DBF6;
+  position: relative;
+  border-top: dotted 2px;
+  border-bottom: dotted 2px;
+  border-color: black;
+  width: 80%;
+  height: 30em;
+  margin: 0 auto;
+}
+
+.circle-base {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  border-radius: 50%;
+}
+
+.circle1 {
+  width: 125px;
+  height: 125px;
+  background: red;
+  border: 3px solid green;
+}
+
+.circle-trans1 {
+  -webkit-transform: translate(80%, 45%);
+          transform: translate(80%, 45%);
+}
+
+.circle-trans2 {
+  -webkit-transform: translate(-80%, 45%);
+          transform: translate(-80%, 45%);
+}
+
+.circle-trans3 {
+  -webkit-transform: translate(100%, -80%);
+          transform: translate(100%, -80%);
+}
+
+.circle-trans4 {
+  -webkit-transform: translate(-100%, -80%);
+          transform: translate(-100%, -80%);
+}
+
+.circle-trans5 {
+  -webkit-transform: translate(0%, -165%);
+          transform: translate(0%, -165%);
 }
 /*# sourceMappingURL=main.min.css.map */

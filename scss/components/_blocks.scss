@@ -18,6 +18,10 @@
   height: auto;
   fill: #3b8beb;
   stroke: none;
+
+  @include breakpoint('extra large') {
+    display: none;
+  }
 }
 
 // .red-divide {
