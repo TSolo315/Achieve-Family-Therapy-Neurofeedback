@@ -334,7 +334,7 @@ body h1 {
   stroke: none;
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 2200px) {
   #blue-curve {
     display: none;
   }
@@ -536,7 +536,7 @@ body h1 {
 }
 
 .second {
-  height: 1000px;
+  height: 1080px;
   background-color: #B23850;
   position: relative;
   padding-bottom: 175px;
@@ -552,6 +552,14 @@ body h1 {
   height: 1080px;
   background-color: #3B8BEB;
   position: relative;
+}
+
+.standout {
+  max-height: 40%;
+}
+
+.head-wrapper {
+  margin-right: 1em;
 }
 
 .head1 {
@@ -574,10 +582,6 @@ body h1 {
   }
 }
 
-.head-wrapper {
-  margin-right: 1em;
-}
-
 .text-wrapper {
   margin-top: 2em;
   text-align: center;
@@ -595,52 +599,331 @@ body h1 {
 }
 
 .reactive-icon-box {
-  background: #C4DBF6;
   position: relative;
-  border-top: dotted 2px;
-  border-bottom: dotted 2px;
-  border-color: black;
-  width: 80%;
-  height: 30em;
-  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 600px;
+}
+
+.reactive-icons-wrapper {
+  position: relative;
+  -ms-flex-preferred-size: 425px;
+      flex-basis: 425px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-right: none;
+}
+
+@media (min-width: 940px) {
+  .reactive-icons-wrapper {
+    border-right: dotted;
+  }
+}
+
+.self-care-info-wrapper {
+  position: relative;
+  text-align: center;
+  -ms-flex-preferred-size: 425px;
+      flex-basis: 425px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-top: dotted;
+  margin-top: 150px;
+}
+
+@media (min-width: 940px) {
+  .self-care-info-wrapper {
+    border-top: none;
+    margin-top: 0;
+  }
+}
+
+.self-care-explanation-wrapper {
+  position: absolute;
+  color: #fff;
+  top: 80%;
+  left: 4%;
+}
+
+@media (min-width: 576px) {
+  .self-care-explanation-wrapper {
+    left: 2%;
+  }
+}
+
+@media (min-width: 640px) {
+  .self-care-explanation-wrapper {
+    left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .self-care-explanation-wrapper {
+    left: -1%;
+  }
+}
+
+@media (min-width: 940px) {
+  .self-care-explanation-wrapper {
+    top: 35%;
+    left: 5%;
+  }
+}
+
+@media (min-width: 992px) {
+  .self-care-explanation-wrapper {
+    top: 35%;
+    left: 9%;
+  }
+}
+
+#self-care-explanation-title {
+  margin-bottom: .5em;
 }
 
 .circle-base {
   position: absolute;
-  top: 50%;
-  left: 20%;
   border-radius: 50%;
 }
 
-.circle1 {
+.circle-left {
   width: 125px;
   height: 125px;
-  background: red;
-  border: 3px solid green;
+  background: #E7E3D4;
+  border: 3px solid #fff;
+}
+
+@media (min-width: 940px) {
+  .circle-left {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.circle-right {
+  width: 125px;
+  height: 125px;
+  background: #E7E3D4;
+  border: 3px solid #fff;
+  top: 15%;
+  left: 40%;
+}
+
+@media (min-width: 940px) {
+  .circle-right {
+    top: 5%;
+    left: 40%;
+    width: 150px;
+    height: 150px;
+  }
 }
 
 .circle-trans1 {
-  -webkit-transform: translate(80%, 45%);
-          transform: translate(80%, 45%);
+  top: 0;
+  left: 40%;
+  background-image: url("/images/hearticon100x100.png");
+  background-repeat: no-repeat;
+  background-position: 10px 15px;
+}
+
+@media (min-width: 640px) {
+  .circle-trans1 {
+    top: 0;
+    left: 40%;
+    background-position: 10px 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .circle-trans1 {
+    top: 0%;
+    left: 40%;
+    background-position: 10px 15px;
+  }
+}
+
+@media (min-width: 940px) {
+  .circle-trans1 {
+    top: 5%;
+    left: 37%;
+    background-position: 23px 26px;
+  }
+}
+
+@media (min-width: 992px) {
+  .circle-trans1 {
+    top: 5%;
+    left: 40%;
+    background-position: 23px 26px;
+  }
 }
 
 .circle-trans2 {
-  -webkit-transform: translate(-80%, 45%);
-          transform: translate(-80%, 45%);
+  top: 35%;
+  left: 15%;
+  background-image: url("/images/friendshipicon100x100.png");
+  background-repeat: no-repeat;
+  background-position: 9px 8px;
+}
+
+@media (min-width: 640px) {
+  .circle-trans2 {
+    top: 35%;
+    left: 20%;
+    background-position: 9px 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .circle-trans2 {
+    top: 35%;
+    left: 24%;
+    background-position: 9px 8px;
+  }
+}
+
+@media (min-width: 940px) {
+  .circle-trans2 {
+    top: 28%;
+    left: 12%;
+    background-position: 22px 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .circle-trans2 {
+    top: 28%;
+    left: 18%;
+    background-position: 22px 22px;
+  }
 }
 
 .circle-trans3 {
-  -webkit-transform: translate(100%, -80%);
-          transform: translate(100%, -80%);
+  top: 35%;
+  left: 65%;
+  background-image: url("/images/brainicon100x100.png");
+  background-repeat: no-repeat;
+  background-position: 9px 8px;
+}
+
+@media (min-width: 640px) {
+  .circle-trans3 {
+    top: 35%;
+    left: 60%;
+    background-position: 9px 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .circle-trans3 {
+    top: 35%;
+    left: 56%;
+    background-position: 9px 8px;
+  }
+}
+
+@media (min-width: 940px) {
+  .circle-trans3 {
+    top: 28%;
+    left: 62%;
+    background-position: 22px 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .circle-trans3 {
+    top: 28%;
+    left: 62%;
+    background-position: 22px 22px;
+  }
 }
 
 .circle-trans4 {
-  -webkit-transform: translate(-100%, -80%);
-          transform: translate(-100%, -80%);
+  top: 95%;
+  left: 23%;
+  background-image: url("/images/runningicon100x100.png");
+  background-repeat: no-repeat;
+  background-position: 9px 9px;
+}
+
+@media (min-width: 640px) {
+  .circle-trans4 {
+    top: 95%;
+    left: 25%;
+    background-position: 9px 9px;
+  }
+}
+
+@media (min-width: 768px) {
+  .circle-trans4 {
+    top: 95%;
+    left: 29%;
+    background-position: 9px 9px;
+  }
+}
+
+@media (min-width: 940px) {
+  .circle-trans4 {
+    top: 56%;
+    left: 18%;
+    background-position: 22px 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .circle-trans4 {
+    top: 56%;
+    left: 23%;
+    background-position: 22px 22px;
+  }
 }
 
 .circle-trans5 {
-  -webkit-transform: translate(0%, -165%);
-          transform: translate(0%, -165%);
+  top: 95%;
+  left: 57%;
+  background-image: url("/images/meditationicon100x100.png");
+  background-repeat: no-repeat;
+  background-position: 9px 1px;
+}
+
+@media (min-width: 640px) {
+  .circle-trans5 {
+    top: 95%;
+    left: 55%;
+    background-position: 9px 1px;
+  }
+}
+
+@media (min-width: 768px) {
+  .circle-trans5 {
+    top: 95%;
+    left: 51%;
+    background-position: 9px 1px;
+  }
+}
+
+@media (min-width: 940px) {
+  .circle-trans5 {
+    top: 56%;
+    left: 56%;
+    background-position: 22px 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .circle-trans5 {
+    top: 56%;
+    left: 57%;
+    background-position: 22px 15px;
+  }
 }
 /*# sourceMappingURL=main.min.css.map */

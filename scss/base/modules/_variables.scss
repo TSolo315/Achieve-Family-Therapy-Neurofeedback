@@ -1,9 +1,11 @@
 $breakpoints: (
   'small':  ( min-width:  576px ),
+  'custommedium': ( min-width:  640px ), 
   'medium': ( min-width:  768px ), // where you want a hamburger menu.768px
+  'customlarge':  ( min-width: 940px ),
   'large':  ( min-width: 992px ),
   'larger': ( min-width: 1200px ),
-  'extra large': ( min-width: 2000px )
+  'extra large': ( min-width: 2200px )
 ) !default;
 
 $phi: 1.6180339887498948482;

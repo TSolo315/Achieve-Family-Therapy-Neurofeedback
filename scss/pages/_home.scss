@@ -1,19 +1,28 @@
 .second {
-  height: 100%;
+  height: 1080px;
   background-color: color('base', 'secondary');
   position: relative;
   padding-bottom: 175px;
 
   @include breakpoint('larger') {
-    height: 110%;
+    height: 1080px;
   }
 }
 
 .third {
-  height: 100%;
+  height: 1080px;
   background-color: color('base', 'primary');
   position: relative
 }
+
+.standout {
+  max-height: 40%;
+}
+
+.head-wrapper {
+  margin-right: 1em;
+}
+
 
 .head1 {
   display: none;
@@ -31,10 +40,6 @@
   }
 }
 
-.head-wrapper {
-  margin-right: 1em;
-}
-
 .text-wrapper {
   margin-top: 2em;
   text-align: center;
@@ -50,43 +55,278 @@
 }
 
 .reactive-icon-box {
-  background: color('base', 'quiet');
+  // background: color('base', 'quiet');
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   // border-style: dotted;
-  border-top: dotted 2px;
-  border-bottom: dotted 2px;
-  border-color: black;
-  width: 80%;
-  height: 30em;
-  margin: 0 auto;
+  // border-top: dotted 2px;
+  // border-bottom: dotted 2px;
+  // border-color: black;
+  width: 100%;
+  height: 600px;
+}
+
+.reactive-icons-wrapper {
+  position: relative;
+  flex-basis: 425px;
+  flex-grow: 1;
+  border-right: none;
+
+  @include breakpoint('customlarge') {
+    border-right: dotted;
+  }
+}
+
+.self-care-info-wrapper {
+  position: relative;
+  text-align: center;
+  flex-basis: 425px;
+  flex-grow: 1;
+  border-top: dotted;
+  margin-top: 150px;
+
+  @include breakpoint('customlarge') {
+    border-top: none;
+    margin-top: 0;
+  }
+}
+
+.self-care-explanation-wrapper {
+  position: absolute;
+  color: color('type', 'ww');
+  top: 80%;
+  left: 4%;
+
+  @include breakpoint('small') {
+    left: 2%;
+  }
+
+  @include breakpoint('custommedium') {
+    left: 0;
+  }
+
+  @include breakpoint('medium') {
+    left: -1%;
+  }
+
+  @include breakpoint('customlarge') {
+    top: 35%;
+    left: 5%;
+  }
+
+  @include breakpoint('large') {
+    top: 35%;
+    left: 9%;
+  }
+}
+
+#self-care-explanation-title {
+  margin-bottom: .5em;
 }
 
 .circle-base {
   position: absolute;
-  top: 50%;
-  left: 20%;
   border-radius: 50%;
 }
 
-.circle1 {
+.circle-left {
   width: 125px;
   height: 125px;
-  background: red;
-  border: 3px solid green;
+  background: color('base', 'highlight');
+  border: 3px solid color('type', 'ww');
+
+  @include breakpoint('customlarge') {
+    width: 150px;
+    height: 150px;
+  }
 }
 
+.circle-right {
+  width: 125px;
+  height: 125px;
+  background: color('base', 'highlight');
+  border: 3px solid color('type', 'ww');
+  top: 15%;
+  left: 40%;
+
+  @include breakpoint('customlarge') {
+    top: 5%;
+    left: 40%;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+// .circle-trans1 {
+//   transform: translate(80%, 45%);
+// }
+// .circle-trans2 {
+//   transform: translate(-80%, 45%);
+// }
+// .circle-trans3 {
+//   transform: translate(100%, -80%);
+// }
+// .circle-trans4 {
+//   transform: translate(-100%, -80%);
+// }
+// .circle-trans5 {
+//   transform: translate(0%, -165%);
+// }
+
 .circle-trans1 {
-  transform: translate(80%, 45%);
+  top: 0;
+  left: 40%;
+  background-image: url("/images/hearticon100x100.png");
+  background-repeat: no-repeat;
+  background-position: 10px 15px;
+
+  @include breakpoint('custommedium') {
+    top: 0;
+    left: 40%;
+    background-position: 10px 15px;
+  }
+
+  @include breakpoint('medium') {
+    top: 0%;
+    left: 40%;
+    background-position: 10px 15px;
+  }
+  
+  @include breakpoint('customlarge') {
+    top: 5%;
+    left: 37%;
+    background-position: 23px 26px;
+  }
+
+  @include breakpoint('large') {
+    top: 5%;
+    left: 40%;
+    background-position: 23px 26px;
+  }
 }
 .circle-trans2 {
-  transform: translate(-80%, 45%);
+  top: 35%;
+  left: 15%;
+  background-image: url("/images/friendshipicon100x100.png");
+  background-repeat: no-repeat;
+  background-position: 9px 8px;
+
+  @include breakpoint('custommedium') {
+    top: 35%;
+    left: 20%;
+    background-position: 9px 8px;
+  }
+
+  @include breakpoint('medium') {
+    top: 35%;
+    left: 24%;
+    background-position: 9px 8px;
+  }
+  
+  @include breakpoint('customlarge') {
+    top: 28%;
+    left: 12%;
+    background-position: 22px 22px;
+  }
+
+  @include breakpoint('large') {
+    top: 28%;
+    left: 18%;
+    background-position: 22px 22px;
+  }
 }
 .circle-trans3 {
-  transform: translate(100%, -80%);
+  top: 35%;
+  left: 65%;
+  background-image: url("/images/brainicon100x100.png");
+  background-repeat: no-repeat;
+  background-position: 9px 8px;
+
+  @include breakpoint('custommedium') {
+    top: 35%;
+    left: 60%;
+    background-position: 9px 8px;
+  }
+
+  @include breakpoint('medium') {
+    top: 35%;
+    left: 56%;
+    background-position: 9px 8px;
+  }
+  
+  @include breakpoint('customlarge') {
+    top: 28%;
+    left: 62%;
+    background-position: 22px 22px;
+  }
+
+  @include breakpoint('large') {
+    top: 28%;
+    left: 62%;
+    background-position: 22px 22px;
+  }
 }
 .circle-trans4 {
-  transform: translate(-100%, -80%);
+  top: 95%;
+  left: 23%;
+  background-image: url("/images/runningicon100x100.png");
+  background-repeat: no-repeat;
+  background-position: 9px 9px;
+
+  @include breakpoint('custommedium') {
+    top: 95%;
+    left: 25%;
+    background-position: 9px 9px;
+  }
+
+  @include breakpoint('medium') {
+    top: 95%;
+    left: 29%;
+    background-position: 9px 9px;
+  }
+
+  @include breakpoint('customlarge') {
+    top: 56%;
+    left: 18%;
+    background-position: 22px 22px;
+  }
+
+  @include breakpoint('large') {
+    top: 56%;
+    left: 23%;
+    background-position: 22px 22px;
+  }
 }
 .circle-trans5 {
-  transform: translate(0%, -165%);
+  top: 95%;
+  left: 57%;
+  background-image: url("/images/meditationicon100x100.png");
+  background-repeat: no-repeat;
+  background-position: 9px 1px;
+
+  @include breakpoint('custommedium') {
+    top: 95%;
+    left: 55%;
+    background-position: 9px 1px;
+  }
+
+  @include breakpoint('medium') {
+    top: 95%;
+    left: 51%;
+    background-position: 9px 1px;
+  }
+
+  @include breakpoint('customlarge') {
+    top: 56%;
+    left: 56%;
+    background-position: 22px 15px;
+  }
+
+  @include breakpoint('large') {
+    top: 56%;
+    left: 57%;
+    background-position: 22px 15px;
+  }
 }
