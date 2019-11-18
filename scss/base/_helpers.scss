@@ -27,7 +27,7 @@
 }
 
 .addflex--end {
-  @include flexStyle(row, null, flex-end, null, center)
+  @include flexStyle(row, null, flex-end, null, null)
 }
 
 .addflex--start {

@@ -12,7 +12,19 @@
 .third {
   height: 1080px;
   background-color: color('base', 'primary');
-  position: relative
+  position: relative;
+  padding-bottom: 175px;
+}
+
+.fourth {
+  height: 1080px;
+  background-color: color('base', 'secondary');
+  position: relative;
+  padding-bottom: 175px;
+
+  @include breakpoint('larger') {
+    height: 1080px;
+  }
 }
 
 .standout {
@@ -24,7 +36,7 @@
 }
 
 
-.head1 {
+.image-s1 {
   display: none;
 
   @include breakpoint('larger') {
@@ -32,7 +44,7 @@
   }
 }
 
-.head2 {
+.image-s2 {
   display: block;
   
   @include breakpoint('larger') {
@@ -55,15 +67,10 @@
 }
 
 .reactive-icon-box {
-  // background: color('base', 'quiet');
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  // border-style: dotted;
-  // border-top: dotted 2px;
-  // border-bottom: dotted 2px;
-  // border-color: black;
   width: 100%;
   height: 600px;
 }
@@ -97,7 +104,11 @@
   position: absolute;
   color: color('type', 'ww');
   top: 80%;
-  left: 4%;
+  left: 3%;
+
+  @include breakpoint('cellbig') {
+    left: 8%;
+  }
 
   @include breakpoint('small') {
     left: 2%;
@@ -113,12 +124,12 @@
 
   @include breakpoint('customlarge') {
     top: 35%;
-    left: 5%;
+    left: 12%;
   }
 
   @include breakpoint('large') {
     top: 35%;
-    left: 9%;
+    left: 6%;
   }
 }
 
@@ -149,7 +160,17 @@
   background: color('base', 'highlight');
   border: 3px solid color('type', 'ww');
   top: 15%;
-  left: 40%;
+  left: 30%;
+
+  @include breakpoint('cellsmall') {
+    top: 15%;
+    left: 35%;
+  }
+
+  @include breakpoint('cellbig') {
+    top: 15%;
+    left: 40%;
+  }
 
   @include breakpoint('customlarge') {
     top: 5%;
@@ -177,10 +198,22 @@
 
 .circle-trans1 {
   top: 0;
-  left: 40%;
+  left: 30%;
   background-image: url("/images/hearticon100x100.png");
   background-repeat: no-repeat;
   background-position: 10px 15px;
+
+  @include breakpoint('cellsmall') {
+    top: 0;
+    left: 35%;
+    background-position: 10px 15px;
+  }
+
+  @include breakpoint('cellbig') {
+    top: 0;
+    left: 40%;
+    background-position: 10px 15px;
+  }
 
   @include breakpoint('custommedium') {
     top: 0;
@@ -207,11 +240,23 @@
   }
 }
 .circle-trans2 {
-  top: 35%;
-  left: 15%;
+  top: 40%;
+  left: 0%;
   background-image: url("/images/friendshipicon100x100.png");
   background-repeat: no-repeat;
   background-position: 9px 8px;
+
+  @include breakpoint('cellsmall') {
+    top: 35%;
+    left: 5%;
+    background-position: 9px 8px;
+  }
+
+  @include breakpoint('cellbig') {
+    top: 35%;
+    left: 15%;
+    background-position: 9px 8px;
+  }
 
   @include breakpoint('custommedium') {
     top: 35%;
@@ -238,11 +283,23 @@
   }
 }
 .circle-trans3 {
-  top: 35%;
-  left: 65%;
+  top: 40%;
+  left: 60%;
   background-image: url("/images/brainicon100x100.png");
   background-repeat: no-repeat;
   background-position: 9px 8px;
+
+  @include breakpoint('cellsmall') {
+    top: 35%;
+    left: 65%;
+    background-position: 9px 8px;
+  }
+
+  @include breakpoint('cellbig') {
+    top: 35%;
+    left: 65%;
+    background-position: 9px 8px;
+  }
 
   @include breakpoint('custommedium') {
     top: 35%;
@@ -270,10 +327,22 @@
 }
 .circle-trans4 {
   top: 95%;
-  left: 23%;
+  left: 9%;
   background-image: url("/images/runningicon100x100.png");
   background-repeat: no-repeat;
   background-position: 9px 9px;
+
+  @include breakpoint('cellsmall') {
+    top: 90%;
+    left: 17%;
+    background-position: 9px 9px;
+  }
+
+  @include breakpoint('cellbig') {
+    top: 95%;
+    left: 23%;
+    background-position: 9px 9px;
+  }
 
   @include breakpoint('custommedium') {
     top: 95%;
@@ -301,10 +370,22 @@
 }
 .circle-trans5 {
   top: 95%;
-  left: 57%;
+  left: 52%;
   background-image: url("/images/meditationicon100x100.png");
   background-repeat: no-repeat;
   background-position: 9px 1px;
+
+  @include breakpoint('cellsmall') {
+    top: 90%;
+    left: 53%;
+    background-position: 9px 1px;
+  }
+
+  @include breakpoint('cellbig') {
+    top: 95%;
+    left: 57%;
+    background-position: 9px 1px;
+  }
 
   @include breakpoint('custommedium') {
     top: 95%;
@@ -328,5 +409,15 @@
     top: 56%;
     left: 57%;
     background-position: 22px 15px;
+  }
+}
+
+.title-wrapper {
+  text-align: center;
+
+  h4 {
+    font-weight: 200;
+    font-style: italic;
+    margin-top: -.8em;
   }
 }

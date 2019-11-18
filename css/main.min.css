@@ -204,41 +204,41 @@ body a:visited {
 }
 
 body h4 {
-  font-size: 20px;
+  font-size: 19.2px;
   font-family: "Playfair Display", serif;
   font-weight: 500;
 }
 
 body h3 {
-  font-size: 25px;
+  font-size: 23.04px;
   font-family: "Playfair Display", serif;
   font-weight: 500;
 }
 
 body h2 {
-  font-size: 31.25px;
+  font-size: 27.648px;
   font-family: "Playfair Display", serif;
   font-weight: 500;
 }
 
 body h1 {
-  font-size: 39.0625px;
+  font-size: 33.1776px;
   font-family: "Playfair Display", serif;
   font-weight: 500;
 }
 
 @media (min-width: 1200px) {
   body h4 {
-    font-size: 31.25px;
+    font-size: 27.648px;
   }
   body h3 {
-    font-size: 39.0625px;
+    font-size: 33.1776px;
   }
   body h2 {
-    font-size: 48.82812px;
+    font-size: 39.81312px;
   }
   body h1 {
-    font-size: 61.03516px;
+    font-size: 47.77574px;
   }
 }
 
@@ -291,8 +291,6 @@ body h1 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -ms-flex-line-pack: center;
-      align-content: center;
 }
 
 .addflex--start {
@@ -336,6 +334,22 @@ body h1 {
 
 @media (min-width: 2200px) {
   #blue-curve {
+    display: none;
+  }
+}
+
+#red-curve {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  fill: #B23850;
+  stroke: none;
+}
+
+@media (min-width: 2200px) {
+  #red-curve {
     display: none;
   }
 }
@@ -552,6 +566,20 @@ body h1 {
   height: 1080px;
   background-color: #3B8BEB;
   position: relative;
+  padding-bottom: 175px;
+}
+
+.fourth {
+  height: 1080px;
+  background-color: #B23850;
+  position: relative;
+  padding-bottom: 175px;
+}
+
+@media (min-width: 1200px) {
+  .fourth {
+    height: 1080px;
+  }
 }
 
 .standout {
@@ -562,22 +590,22 @@ body h1 {
   margin-right: 1em;
 }
 
-.head1 {
+.image-s1 {
   display: none;
 }
 
 @media (min-width: 1200px) {
-  .head1 {
+  .image-s1 {
     display: block;
   }
 }
 
-.head2 {
+.image-s2 {
   display: block;
 }
 
 @media (min-width: 1200px) {
-  .head2 {
+  .image-s2 {
     display: none;
   }
 }
@@ -622,7 +650,7 @@ body h1 {
   border-right: none;
 }
 
-@media (min-width: 940px) {
+@media (min-width: 922px) {
   .reactive-icons-wrapper {
     border-right: dotted;
   }
@@ -640,7 +668,7 @@ body h1 {
   margin-top: 150px;
 }
 
-@media (min-width: 940px) {
+@media (min-width: 922px) {
   .self-care-info-wrapper {
     border-top: none;
     margin-top: 0;
@@ -651,7 +679,13 @@ body h1 {
   position: absolute;
   color: #fff;
   top: 80%;
-  left: 4%;
+  left: 3%;
+}
+
+@media (min-width: 426px) {
+  .self-care-explanation-wrapper {
+    left: 8%;
+  }
 }
 
 @media (min-width: 576px) {
@@ -672,17 +706,17 @@ body h1 {
   }
 }
 
-@media (min-width: 940px) {
+@media (min-width: 922px) {
   .self-care-explanation-wrapper {
     top: 35%;
-    left: 5%;
+    left: 12%;
   }
 }
 
 @media (min-width: 992px) {
   .self-care-explanation-wrapper {
     top: 35%;
-    left: 9%;
+    left: 6%;
   }
 }
 
@@ -702,7 +736,7 @@ body h1 {
   border: 3px solid #fff;
 }
 
-@media (min-width: 940px) {
+@media (min-width: 922px) {
   .circle-left {
     width: 150px;
     height: 150px;
@@ -715,10 +749,24 @@ body h1 {
   background: #E7E3D4;
   border: 3px solid #fff;
   top: 15%;
-  left: 40%;
+  left: 30%;
 }
 
-@media (min-width: 940px) {
+@media (min-width: 376px) {
+  .circle-right {
+    top: 15%;
+    left: 35%;
+  }
+}
+
+@media (min-width: 426px) {
+  .circle-right {
+    top: 15%;
+    left: 40%;
+  }
+}
+
+@media (min-width: 922px) {
   .circle-right {
     top: 5%;
     left: 40%;
@@ -729,10 +777,26 @@ body h1 {
 
 .circle-trans1 {
   top: 0;
-  left: 40%;
+  left: 30%;
   background-image: url("/images/hearticon100x100.png");
   background-repeat: no-repeat;
   background-position: 10px 15px;
+}
+
+@media (min-width: 376px) {
+  .circle-trans1 {
+    top: 0;
+    left: 35%;
+    background-position: 10px 15px;
+  }
+}
+
+@media (min-width: 426px) {
+  .circle-trans1 {
+    top: 0;
+    left: 40%;
+    background-position: 10px 15px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -751,7 +815,7 @@ body h1 {
   }
 }
 
-@media (min-width: 940px) {
+@media (min-width: 922px) {
   .circle-trans1 {
     top: 5%;
     left: 37%;
@@ -768,11 +832,27 @@ body h1 {
 }
 
 .circle-trans2 {
-  top: 35%;
-  left: 15%;
+  top: 40%;
+  left: 0%;
   background-image: url("/images/friendshipicon100x100.png");
   background-repeat: no-repeat;
   background-position: 9px 8px;
+}
+
+@media (min-width: 376px) {
+  .circle-trans2 {
+    top: 35%;
+    left: 5%;
+    background-position: 9px 8px;
+  }
+}
+
+@media (min-width: 426px) {
+  .circle-trans2 {
+    top: 35%;
+    left: 15%;
+    background-position: 9px 8px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -791,7 +871,7 @@ body h1 {
   }
 }
 
-@media (min-width: 940px) {
+@media (min-width: 922px) {
   .circle-trans2 {
     top: 28%;
     left: 12%;
@@ -808,11 +888,27 @@ body h1 {
 }
 
 .circle-trans3 {
-  top: 35%;
-  left: 65%;
+  top: 40%;
+  left: 60%;
   background-image: url("/images/brainicon100x100.png");
   background-repeat: no-repeat;
   background-position: 9px 8px;
+}
+
+@media (min-width: 376px) {
+  .circle-trans3 {
+    top: 35%;
+    left: 65%;
+    background-position: 9px 8px;
+  }
+}
+
+@media (min-width: 426px) {
+  .circle-trans3 {
+    top: 35%;
+    left: 65%;
+    background-position: 9px 8px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -831,7 +927,7 @@ body h1 {
   }
 }
 
-@media (min-width: 940px) {
+@media (min-width: 922px) {
   .circle-trans3 {
     top: 28%;
     left: 62%;
@@ -849,10 +945,26 @@ body h1 {
 
 .circle-trans4 {
   top: 95%;
-  left: 23%;
+  left: 9%;
   background-image: url("/images/runningicon100x100.png");
   background-repeat: no-repeat;
   background-position: 9px 9px;
+}
+
+@media (min-width: 376px) {
+  .circle-trans4 {
+    top: 90%;
+    left: 17%;
+    background-position: 9px 9px;
+  }
+}
+
+@media (min-width: 426px) {
+  .circle-trans4 {
+    top: 95%;
+    left: 23%;
+    background-position: 9px 9px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -871,7 +983,7 @@ body h1 {
   }
 }
 
-@media (min-width: 940px) {
+@media (min-width: 922px) {
   .circle-trans4 {
     top: 56%;
     left: 18%;
@@ -889,10 +1001,26 @@ body h1 {
 
 .circle-trans5 {
   top: 95%;
-  left: 57%;
+  left: 52%;
   background-image: url("/images/meditationicon100x100.png");
   background-repeat: no-repeat;
   background-position: 9px 1px;
+}
+
+@media (min-width: 376px) {
+  .circle-trans5 {
+    top: 90%;
+    left: 53%;
+    background-position: 9px 1px;
+  }
+}
+
+@media (min-width: 426px) {
+  .circle-trans5 {
+    top: 95%;
+    left: 57%;
+    background-position: 9px 1px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -911,7 +1039,7 @@ body h1 {
   }
 }
 
-@media (min-width: 940px) {
+@media (min-width: 922px) {
   .circle-trans5 {
     top: 56%;
     left: 56%;
@@ -925,5 +1053,15 @@ body h1 {
     left: 57%;
     background-position: 22px 15px;
   }
+}
+
+.title-wrapper {
+  text-align: center;
+}
+
+.title-wrapper h4 {
+  font-weight: 200;
+  font-style: italic;
+  margin-top: -.8em;
 }
 /*# sourceMappingURL=main.min.css.map */
