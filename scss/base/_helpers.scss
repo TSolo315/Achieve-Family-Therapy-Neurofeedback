@@ -26,6 +26,10 @@
   @include flexAllCenterRow();
 }
 
+.addflex-column {
+  @include flexStyle(column, null, null, null null);
+}
+
 .addflex--end {
   @include flexStyle(row, null, flex-end, null, null)
 }
