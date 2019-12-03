@@ -4,36 +4,107 @@
   position: relative;
   padding-bottom: 175px;
 
-  @include breakpoint('larger') {
-    height: 1080px;
-  }
+  // @include breakpoint('cellsmall') {
+  //   height: 975px;
+  // }
+
+  // @include breakpoint('medium') {
+  //   height: 950px;
+  // }
+
 }
 
 .third {
-  height: 1080px;
+  height: 1000px;
   background-color: color('base', 'primary');
   position: relative;
   padding-bottom: 175px;
 
-  @include breakpoint('larger') {
-    height: 1080px;
+  @include breakpoint('cellsmall') {
+    height: 975px;
   }
+
+  @include breakpoint('medium') {
+    height: 950px;
+  }
+
 }
 
 .fourth {
-  height: 1080px;
+  height: 925px;
   background-color: color('base', 'secondary');
   position: relative;
   padding-bottom: 175px;
 
+  @include breakpoint('cellsmall') {
+    height: 875px;
+  }
+
+  @include breakpoint('small') {
+    height: 700px;
+  }
+
+  @include breakpoint('medium') {
+    height: 750px;
+  }
+
+}
+
+.fifth {
+  height: 1080px;
+  background-color: color('loud', 'darker');
+  position: relative;
+  // padding-bottom: 175px;
+
   @include breakpoint('larger') {
     height: 1080px;
   }
 }
 
-.top-section {
-  height: 900px;
-  width: 100%;
+.sixth {
+  height: 1220px;
+  background-color: color('base', 'primary');
+  // background-image: url("https://www.transparenttextures.com/patterns/dark-stripes.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/debut-light.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/light-sketch.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/redox-01.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/retro-intro.png");
+  // background-image: url("https://www.transparenttextures.com/patterns/tex2res2.png");
+  background-image: url("/images/darkhoneycombbackground.png");
+  position: relative;
+  // padding-bottom: 175px;
+
+  @include breakpoint('cellbig') {
+    height: 1200px;
+  }
+
+  @include breakpoint('small') {
+    height: 1180px;
+  }
+
+  @include breakpoint('medium') {
+    height: 1160px;
+  }
+
+  @include breakpoint('large') {
+    height: 1140px;
+  }
+
+  @include breakpoint('larger') {
+    height: 1120px;
+  }
+}
+
+.seventh {
+  height: 1080px;
+  background-color: color('loud', 'darker');
+  position: relative;
+  // padding-bottom: 175px;
+
+  @include breakpoint('larger') {
+    height: 1080px;
+  }
 }
 
 .flex-align-right {
@@ -503,6 +574,145 @@
       margin-right: 2em;
       margin-top: 2em;
       width: 14em;
+    }
+  }
+}
+
+.package-container {
+  width: 100%;
+  height: 100%;
+
+  @include breakpoint('medium') {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .package-option {
+    display: block;
+    text-align: center;
+    height: 400px;
+    margin: 0 auto;
+    width: 60%;
+    padding: 2em 2em;
+
+    @include breakpoint('medium') {
+      display: inline-block;
+      flex-basis: 0;
+      flex: 1 1 0px;
+    }
+
+    &:nth-child(2) {
+      border-top: dotted 1px;
+      border-bottom: dotted 1px;
+
+      @include breakpoint('medium') {
+      border-left: dotted 1px;
+      border-right: dotted 1px;
+      border-top: none;
+      border-bottom: none;
+      }
+    }
+  }
+}
+
+.contact-form {
+  form {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint('small') {
+      justify-content: center;
+    }
+
+    .form-field {
+      // border: solid 2px;
+      display: flex;
+      margin-bottom: 1em;
+      flex-direction: column;
+      
+      @include breakpoint('small') {
+        flex-direction: row;
+      }
+
+      label {
+        flex-basis: 30%;
+        text-align: left;
+        margin-right: 1em;
+
+        @include breakpoint('small') {
+          text-align: right;
+          align-self: center;
+        }
+      }
+
+      input[type=text], input[type=tel], input[type=email], textarea, select {
+        flex-basis: 38%;
+        margin-top: .5em;
+        background-color: rgba(color('loud', 'light'), 0.2);
+        // text-transform: uppercase; 
+        // border: 2px groove #fff; 
+        border: none;
+        border-radius: 6px;
+        color: #fff; 
+        min-height: 35px; 
+        padding: 8px 8px;
+
+        @include breakpoint('small') {
+          margin-top: 0;
+          min-height: 40px;
+          min-width: 80px;
+          flex-basis: 46%
+        }
+
+        @include breakpoint('medium') {
+          margin-top: 0;
+          min-height: 40px;
+          min-width: 80px;
+          flex-basis: 38%
+        }
+      }
+
+      textarea {
+        min-height: 80px;
+
+        @include breakpoint('small') {
+          margin-top: 0;
+          height: 120px;
+        }
+
+        &::placeholder {
+          color: color('type', 'gg')
+        }
+      }
+
+      select {
+        margin-bottom: .5em;
+        
+         @include breakpoint('small') {
+          margin-bottom: 0;
+        }
+
+        option {
+          color: #000;
+        }
+      }
+
+      input[type=submit] {
+        flex-basis: 10%;
+        margin: auto 31.5%;
+        padding: 10px 40px;
+        // background-color: rgba(color('loud', 'lighter'), 0.2);
+        background-color: transparent;
+        color: color('type', 'ww');
+        border-style: ridge;
+        border-radius: 6px;
+      }
+
+
+      // option:not(:checked) {
+      //   background-color: rgba(133, 144, 170, 1)
+      // }
     }
   }
 }

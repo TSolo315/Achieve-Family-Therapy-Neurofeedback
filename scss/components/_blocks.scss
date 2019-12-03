@@ -38,23 +38,105 @@
   }
 }
 
-// .red-divide {
-//   position:absolute;
-//   bottom: 0;
-//   width: 100%;
-//   height: 200px;
-//   background: url("/images/bluediv425x175long.png") no-repeat left center;
-//   background-size: cover;
+.blue-diagonal-down{
+  width: 0;
+  height:0;
+  border-top: 150px solid color('base', 'primary');
+  border-left: 100vw solid transparent;
+  border-right: 0;
+  border-bottom: 0
+}
 
-//   @include breakpoint('medium') {
-//     background: url("/images/bluediv800x175.png") no-repeat left center;
-//     background-size: cover;
-//   }
-//   @include breakpoint('large') {
-//     background: url("/images/bluediv2000x300.png") no-repeat left center;
-//     background-size: cover;
-//   }
-//   @include breakpoint('extra large') {
-//     display: none;
-//   }
-// }
+.blue-diagonal-up{
+  width: 0;
+  height:0;
+  border-bottom: 150px solid color('base', 'primary');
+  border-left: 100vw solid transparent;
+  position: absolute;
+  bottom:0px;
+}
+
+.black-diagonal-down{
+  width: 0;
+  height:0;
+  border-top: 150px solid color('loud', 'darker');
+  border-left: 100vw solid transparent;
+  border-right: 0;
+  border-bottom: 0
+}
+
+.black-diagonal-up{
+  width: 0;
+  height:0;
+  border-bottom: 150px solid color('loud', 'darker');
+  border-left: 100vw solid transparent;
+  position: absolute;
+  bottom:0px;
+}
+
+.accordion { 
+  background-color: #fefffa;
+  color: black;
+  max-width: 800px;
+  margin: 50px auto;
+  border-top: 6px solid color('base', 'secondary');
+  line-height: 1.6;
+  box-shadow: 2px 2px 5px 0px #000;
+
+  ul{
+    margin-left:1em;
+  }
+  
+  &__item {
+    border-bottom: 1px solid #dce7eb;
+  }
+
+  &__title {
+    padding: 15px 15px 15px 40px;
+    display: block;
+    position: relative;
+    font-weight: 400;
+
+    &:before {
+      font-family: FontAwesome;
+      content: "\f055";
+      font-size: 20px;
+      position: absolute;
+      left: 15px;
+      top: 12px;
+      color: color('base', 'secondary');
+    }
+    
+    h5 {
+      border-bottom: 1px solid #fefffa;
+      display:inline-block;
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      outline: none;
+      h5 {
+        border-bottom-color: #a8bdc4;
+        display:inline-block;
+      }
+    }
+
+    .is-expanded & {
+      &:before {
+        content: "\f056";
+      }
+
+    }
+  }
+
+    &__content-inner {
+        padding: 0 40px 10px 40px;
+    }
+
+  &__content {
+    transition: height 0.3s ease-out;
+    height: 0;
+    overflow: hidden;
+  }
+}
