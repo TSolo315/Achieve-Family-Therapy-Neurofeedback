@@ -1,4 +1,4 @@
-.second {
+#about-us {
   height: 1080px;
   background-color: color('base', 'secondary');
   position: relative;
@@ -14,7 +14,7 @@
 
 }
 
-.third {
+#self-care {
   height: 1000px;
   background-color: color('base', 'primary');
   position: relative;
@@ -30,7 +30,7 @@
 
 }
 
-.fourth {
+#self-care-quiz {
   height: 925px;
   background-color: color('base', 'secondary');
   position: relative;
@@ -50,7 +50,7 @@
 
 }
 
-.fifth {
+#package-options {
   height: 1080px;
   background-color: color('loud', 'darker');
   position: relative;
@@ -61,7 +61,7 @@
   }
 }
 
-.sixth {
+#frequently-asked-questions {
   height: 1220px;
   background-color: color('base', 'primary');
   // background-image: url("https://www.transparenttextures.com/patterns/dark-stripes.png");
@@ -96,14 +96,25 @@
   }
 }
 
-.seventh {
-  height: 1080px;
+#contact-us {
+  height: 900px;
   background-color: color('loud', 'darker');
   position: relative;
   // padding-bottom: 175px;
 
   @include breakpoint('larger') {
-    height: 1080px;
+    height: 850px;
+  }
+}
+
+#footer {
+  height: 150px;
+  background-color: color('loud', 'base');
+  position: relative;
+  // padding-bottom: 175px;
+
+  @include breakpoint('larger') {
+    height: 150px;
   }
 }
 
@@ -165,9 +176,9 @@
   margin-top: 2em;
   text-align: center;
 
-  h1 {
-  text-shadow: 1px 1px 1px color('type', 'bb');
-  }
+  // h1 {
+  // text-shadow: 1px 1px 1px color('type', 'bb');
+  // }
 
   p {
     text-align: left;
@@ -248,7 +259,7 @@
 
 #self-care-explanation-title {
   margin-bottom: .5em;
-  text-shadow: 1px 1px 1px color('type', 'bb');
+  // text-shadow: 1px 1px 1px color('type', 'bb');
 }
 
 .circle-base {
@@ -513,9 +524,9 @@
 .title-wrapper {
   text-align: center;
 
-  h1 {
-  text-shadow: 1px 1px 1px color('type', 'bb');
-  }
+  // h1 {
+  // text-shadow: 1px 1px 1px color('type', 'bb');
+  // }
 
   h4 {
     font-weight: 200;
@@ -658,6 +669,10 @@
         min-height: 35px; 
         padding: 8px 8px;
 
+        &:focus {
+          box-shadow: 1px 1px 3px rgba(10,10,10,.3); 
+        }
+
         @include breakpoint('small') {
           margin-top: 0;
           min-height: 40px;
@@ -694,7 +709,7 @@
         }
 
         option {
-          color: #000;
+          color: color('type', 'bb');
         }
       }
 
@@ -702,17 +717,19 @@
         flex-basis: 10%;
         margin: auto 31.5%;
         padding: 10px 40px;
-        // background-color: rgba(color('loud', 'lighter'), 0.2);
         background-color: transparent;
         color: color('type', 'ww');
-        border-style: ridge;
+        border: 3px solid color('type', 'ww');
         border-radius: 6px;
+        cursor: pointer;
+        // transition: color .5s, border .5s;
+
+        &:hover {
+          border: 3px solid color('base', 'quiet');
+          color: color('base', 'quiet');
+          box-shadow: 1px 1px 5px rgba(8,8,8,.4); 
+        }
       }
-
-
-      // option:not(:checked) {
-      //   background-color: rgba(133, 144, 170, 1)
-      // }
     }
   }
 }

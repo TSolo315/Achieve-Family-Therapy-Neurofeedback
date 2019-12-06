@@ -11,25 +11,27 @@
   <!-- <script defer="" src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> -->
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar"><a class="navbar--logo" href="http://www.achievefamilytherapy.com" target="_blank">
     <img src="images/AFTLogotrim43.png" class="navbar--logo image-s3" />
-    <img src="images/AFTLogotrim52.png" class="navbar--logo image-s1" />
+    <img src="images/AFTLogotrim52.png" class="navbar--logo image-s1" /></a>
     <button class="hamburger hamburger--squeeze" type="button">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
     </button>
-    <div class="navbar--link active"><a>Intro</a></div>
-    <div class="navbar--link"><a>About</a></div>
-    <div class="navbar--link"><a>Self Care</a></div>
-    <div class="navbar--link"><a>Packages</a></div>
-    <div class="navbar--link"><a>FAQ</a></div>
-    <div class="navbar--link"><a>Contact</a></div>
+    <div class="navbar--links">
+      <div class="navbar--link active"><a>Intro</a></div>
+      <div class="navbar--link"><a>About</a></div>
+      <div class="navbar--link"><a>Self Care</a></div>
+      <div class="navbar--link"><a>Packages</a></div>
+      <div class="navbar--link"><a>FAQ</a></div>
+      <div class="navbar--link"><a>Contact</a></div>
+    </div>
   </nav>
   <div class="content hero--container">
     <p>asd</p>
   </div>
-  <section class="second">
+  <section id="about-us">
     <div class="container addflex-column">
       <div class="flex-align-right">
         <div class="text-wrapper add-extra-margin-top">
@@ -56,7 +58,7 @@
       </div>
     <svg id="blue-curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 300" height="300" width="2000" preserveAspectRatio="xMinYMin slice"><path d="m -10.583333,151.85713 c 0,0 486.833323,154.21429 1019.023833,-4.53571 532.1904,-158.75 1006.9285,9.07143 1006.9285,9.07143 V 318.16667 H -15.119047 Z"/></svg>
   </section>
-  <section class="third">
+  <section id="self-care">
     <div class="container add-padding-top">
         <div class="reactive-icon-box">
           <div class="reactive-icons-wrapper">
@@ -77,7 +79,7 @@
     </div>
     <svg id="red-curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 300" height="300" width="2000" preserveAspectRatio="xMinYMin slice"><path d="m -10.583333,151.85713 c 0,0 486.833323,154.21429 1019.023833,-4.53571 532.1904,-158.75 1006.9285,9.07143 1006.9285,9.07143 V 318.16667 H -15.119047 Z"/></svg>
   </section>
-  <section class="fourth">
+  <section id="self-care-quiz">
     <div class="container add-padding-top">
       <header class="title-wrapper">
         <h1>How Complete is your Self Care?</h1>
@@ -95,7 +97,7 @@
       </div>
     </div>
   </section>
-  <section class="fifth">
+  <section id="package-options">
     <div class="container add-padding-top">
       <div class="package-container">
         <div class="package-option">
@@ -110,11 +112,11 @@
       </div>
     </div>
   </section>
-  <section class="sixth">
+  <section id="frequently-asked-questions">
     <div class="container add-padding-top">
         <header class="title-wrapper">
-            <h1>Frequently Asked Questions</h1>
-          </header>
+          <h1>Frequently Asked Questions</h1>
+        </header>
       <section class="accordion" role="tablist" aria-live="polite" data-behavior="accordion">
         <article class="accordion__item js-show-item-default" data-binding="expand-accordion-item">
           <span id="tab1" tabindex="0" class="accordion__title" aria-controls="panel1" role="tab" aria-selected="false" aria-expanded="false" data-binding="expand-accordion-trigger">
@@ -223,9 +225,11 @@
   
       </section>
     </div>
-    <div class="black-diagonal-up"></div>
   </section>
-<section class="seventh">
+<section id="contact-us">
+    <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="115" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
+      <path d="M0 0 L50 100 L100 0 Z" fill="#3e4658" stroke="#8590AA"></path>
+    </svg>
   <div class="container add-padding-top">
     <header class="title-wrapper">
       <h1>Contact Us</h1>
@@ -236,25 +240,25 @@
           <label id="contact-name-label" for="contact-name" form="contact-form-bottom">
             Full Name:
           </label>
-          <input id="contact-name" name="contact-name" type="text" class="form-input" value="" form="contact-form-bottom">
+          <input id="contact-name" name="contact-name" type="text" class="form-input" value="" form="contact-form-bottom" autocomplete="off">
         </div>
         <div class="form-field">
           <label id="contact-number-label" for="contact-number" form="contact-form-bottom">
             Phone Number:
           </label>
-          <input id="contact-number" name="contact-number" type="tel" class="form-input" value="" form="contact-form-bottom">
+          <input id="contact-number" name="contact-number" type="tel" class="form-input" value="" form="contact-form-bottom" autocomplete="off">
         </div>
         <div class="form-field">
           <label id="contact-email-label" for="contact-email" form="contact-form-bottom">
             Email Address:
           </label>
-          <input id="contact-email" name="contact-email" type="email" class="form-input" value="" form="contact-form-bottom">
+          <input id="contact-email" name="contact-email" type="email" class="form-input" value="" form="contact-form-bottom" autocomplete="off">
         </div>
         <div class="form-field">
           <label id="contact-availability-label" for="contact-availability" form="contact-form-bottom">
             Availability:
           </label>
-          <textarea id="contact-availability" name="contact-availability" type="text" class="form-textarea" value="" form="contact-form-bottom" placeholder="Please tell us what days and times would work best for you."></textarea>
+          <textarea id="contact-availability" name="contact-availability" type="text" class="form-textarea" value="" form="contact-form-bottom" autocomplete="off" wrap="hard" placeholder="Please tell us what days and times would work best for you."></textarea>
         </div>
         <div class="form-field">
           <label id="contact-package-label" for="contact-package">
@@ -273,8 +277,15 @@
     </div>
   </div>
 </section>
+<section id="footer">
+  <b class="double-up"></b>
+  <div class="container add-padding-top">
+
+  </div>
+</section>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="/js/main.js"></script>
 <script src="/js/accordion.js"></script>
 </body>
 </html>
