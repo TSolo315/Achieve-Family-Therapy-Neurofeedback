@@ -1,13 +1,64 @@
 .ghost-button {
+  display: block;
   background-color: transparent;
   justify-self: center;
-  width: 10em;
-  padding: 4px;
+  padding: 1em;
+  margin: 0 auto;
+  margin-top: 3em;
+  font-size: 22px;
   color: #fff;
-  border: 2.5px solid #fff;
+  border: 3px solid #fff;
+  border-radius: 15px;
   text-align: center;
   outline: none;
   text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    border-color: color('base', 'quiet');
+    color: color('base', 'quiet');
+  }
+}
+
+.hero-button {
+  background-color: color('primary', 'dark');
+  // background-color: transparent;
+  padding: 1em;
+  font-size: 20px;
+  font-family: $heading-font-family;
+  font-weight: 500;
+  color: color('quiet', 'light');
+  border: 3px solid color('primary','dark');
+  border-radius: 44px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  line-height: 1.5;
+  cursor: pointer;
+  // box-shadow: 2px 2px 2px color('highlight', 'dark');
+  transition: all 0.25s linear;
+  
+
+  @include breakpoint('medium') {
+    font-size: 22px;
+  }
+
+  @include breakpoint('large') {
+    font-size: 24px;
+  }
+  
+  i {
+    transition: all 0.25s linear;
+  }
+
+  &:hover {
+    background-color: darken(color('primary', 'base'),5%);
+    border: 3px solid darken(color('primary', 'base'),5%);
+    box-shadow: 1px 1px 1px color('primary', 'dark');
+    i {
+      transform: rotateZ(90deg);
+    }
+  }
 }
 
 .button::-moz-focus-inner{

@@ -1,6 +1,6 @@
 #about-us {
-  height: 1080px;
-  background-color: color('base', 'secondary');
+  height: 2160px;
+  background-color: color('loud', 'darker');
   position: relative;
   padding-bottom: 175px;
 
@@ -32,7 +32,7 @@
 
 #self-care-quiz {
   height: 925px;
-  background-color: color('base', 'secondary');
+  background-color: color('loud', 'dark');
   position: relative;
   padding-bottom: 175px;
 
@@ -45,7 +45,7 @@
   }
 
   @include breakpoint('medium') {
-    height: 750px;
+    height: 1080px;
   }
 
 }
@@ -63,17 +63,9 @@
 
 #frequently-asked-questions {
   height: 1220px;
-  background-color: color('base', 'primary');
-  // background-image: url("https://www.transparenttextures.com/patterns/dark-stripes.png");
-  // background-image: url("https://www.transparenttextures.com/patterns/debut-light.png");
-  // background-image: url("https://www.transparenttextures.com/patterns/exclusive-paper.png");
-  // background-image: url("https://www.transparenttextures.com/patterns/light-sketch.png");
-  // background-image: url("https://www.transparenttextures.com/patterns/redox-01.png");
-  // background-image: url("https://www.transparenttextures.com/patterns/retro-intro.png");
-  // background-image: url("https://www.transparenttextures.com/patterns/tex2res2.png");
-  background-image: url("/images/darkhoneycombbackground.png");
+  background-color: color('base','secondary');
+  // background-image: url("/images/darkhoneycombbackground.png");
   position: relative;
-  // padding-bottom: 175px;
 
   @include breakpoint('cellbig') {
     height: 1200px;
@@ -118,32 +110,6 @@
   }
 }
 
-.flex-align-right {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-grow: 1;
-  padding: 0 2em
-}
-
-.flex-align-left {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-grow: 1;
-  padding: 0 2em
-}
-
-.head-wrapper {
-  margin-right: 1em;
-  display:none;
-
-  @include breakpoint('small') {
-    display: block;
-  }
-}
-
-
 .image-s1 {
   display: none;
 
@@ -175,10 +141,10 @@
 .text-wrapper {
   margin-top: 2em;
   text-align: center;
+  // border: dashed 3px white;
+  width: 80%;
+  margin: 0 auto;
 
-  // h1 {
-  // text-shadow: 1px 1px 1px color('type', 'bb');
-  // }
 
   p {
     text-align: left;
@@ -228,10 +194,14 @@
   position: absolute;
   color: color('type', 'ww');
   top: 80%;
-  left: 3%;
+  left: 6%;
+
+  @include breakpoint('cellsmall') {
+    left: 11%;
+  }
 
   @include breakpoint('cellbig') {
-    left: 8%;
+    left: 11%;
   }
 
   @include breakpoint('small') {
@@ -243,7 +213,7 @@
   }
 
   @include breakpoint('medium') {
-    left: -1%;
+    left: -3%;
   }
 
   @include breakpoint('customlarge') {
@@ -253,7 +223,7 @@
 
   @include breakpoint('large') {
     top: 35%;
-    left: 6%;
+    left: 5.5%;
   }
 }
 
@@ -277,6 +247,15 @@
     width: 150px;
     height: 150px;
   }
+
+  &:hover {
+    box-shadow: 2px 2px 6px rgba(0,0,0,.4);
+    border-color: color('base', 'secondary');
+  }
+
+  &.activeCircle {
+    border-color: color('base', 'secondary');
+  }
 }
 
 .circle-right {
@@ -287,23 +266,99 @@
   top: 15%;
   left: 30%;
 
+  &.response1 {
+    background-image: url("/images/hearticon100x100.png");
+    background-repeat: no-repeat;
+    background-position: 10px 15px;
+    border-color: color('base', 'secondary');
+
+    @include breakpoint('customlarge') {
+      background-position: 23px 26px;
+    }
+  }
+
+  &.response2 {
+    background-image: url("/images/friendshipicon100x100.png");
+    background-repeat: no-repeat;
+    background-position: 9px 8px;
+    border-color: color('base', 'secondary');
+
+    @include breakpoint('customlarge') {
+      background-position: 22px 22px;
+    }
+  }
+
+  &.response3 {
+    background-image: url("/images/brainicon100x100.png");
+    background-repeat: no-repeat;
+    background-position: 9px 8px;
+    border-color: color('base', 'secondary');
+
+    @include breakpoint('customlarge') {
+      background-position: 22px 22px;
+    }
+  }
+
+  &.response4 {
+    background-image: url("/images/runningicon100x100.png");
+    background-repeat: no-repeat;
+    background-position: 9px 9px;
+    border-color: color('base', 'secondary');
+
+    @include breakpoint('customlarge') {
+      background-position: 22px 22px;
+    }
+  }
+
+  &.response5 {
+    background-image: url("/images/meditationicon100x100.png");
+    background-repeat: no-repeat;
+    background-position: 9px 1px;
+    border-color: color('base', 'secondary');
+
+    @include breakpoint('customlarge') {
+      background-position: 22px 15px;
+    }
+  }
+
   @include breakpoint('cellsmall') {
     top: 15%;
-    left: 35%;
+    left: 36%;
   }
 
   @include breakpoint('cellbig') {
     top: 15%;
-    left: 40%;
+    left: 39%;
+  }
+
+  @include breakpoint('medium') {
+    top: 15%;
+    left: 39%;
   }
 
   @include breakpoint('customlarge') {
     top: 5%;
-    left: 40%;
+    left: 41%;
     width: 150px;
     height: 150px;
   }
+
+  @include breakpoint('large') {
+    top: 5%;
+    left: 38%;
+  }
+
+  @include breakpoint('larger') {
+    top: 5%;
+    left: 41%;
+  }
+
+  @include breakpoint('custom extra large') {
+    top: 5%;
+    left: 42%;
+  }
 }
+
 
 .circle-trans1 {
   top: 0;
@@ -387,7 +442,7 @@
 
   @include breakpoint('large') {
     top: 28%;
-    left: 18%;
+    left: 20%;
     background-position: 22px 22px;
   }
 }
@@ -430,7 +485,7 @@
 
   @include breakpoint('large') {
     top: 28%;
-    left: 62%;
+    left: 60%;
     background-position: 22px 22px;
   }
 }
@@ -473,7 +528,7 @@
 
   @include breakpoint('large') {
     top: 56%;
-    left: 23%;
+    left: 25%;
     background-position: 22px 22px;
   }
 }
@@ -516,7 +571,7 @@
 
   @include breakpoint('large') {
     top: 56%;
-    left: 57%;
+    left: 55%;
     background-position: 22px 15px;
   }
 }
@@ -535,7 +590,7 @@
 }
 
 .quiz-box {
-  margin-top: 2em;
+  margin-top: 7em;
   width: 100%;
   border: dotted 2px;
   border-radius: 16px;
@@ -554,7 +609,7 @@
     height: 350px;
   }
 
-  .quiz-question {
+  .quiz-questions {
     color: color('quiet', 'light');
     width: 100%;
     margin-top: 4em;
@@ -572,6 +627,21 @@
 
     @include breakpoint('large') {
       font-size: 24px;
+    }
+
+    p.quiz-question {
+      opacity: 1;
+      -moz-transition: opacity, transform;
+      -webkit-transition: opacity, transform;
+      -o-transition: opacity, transform;
+      transition: opacity, transform;
+      transition-duration: 475ms;
+      transition-timing-function: ease-out;
+
+      &.question-hidden {
+        opacity: 0;
+        transform: translateX(-250px);
+      }
     }
   }
 
@@ -592,8 +662,9 @@
 .package-container {
   width: 100%;
   height: 100%;
+  margin-top: 4em;
 
-  @include breakpoint('medium') {
+  @include breakpoint('large') {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -602,12 +673,12 @@
   .package-option {
     display: block;
     text-align: center;
-    height: 400px;
+    height: 550px;
     margin: 0 auto;
     width: 60%;
     padding: 2em 2em;
 
-    @include breakpoint('medium') {
+    @include breakpoint('large') {
       display: inline-block;
       flex-basis: 0;
       flex: 1 1 0px;
@@ -617,12 +688,27 @@
       border-top: dotted 1px;
       border-bottom: dotted 1px;
 
-      @include breakpoint('medium') {
+      @include breakpoint('large') {
       border-left: dotted 1px;
       border-right: dotted 1px;
       border-top: none;
       border-bottom: none;
       }
+    }
+
+    .package-image {
+      margin-top: 7em;
+      transition: transform .35s ease-in-out;
+    }
+
+    &:hover {
+      img {
+        transform: translateY(-1em) rotate(8deg);
+      }
+    }
+
+    .package-description {
+      margin-top: 3em;
     }
   }
 }
@@ -728,6 +814,18 @@
           border: 3px solid color('base', 'quiet');
           color: color('base', 'quiet');
           box-shadow: 1px 1px 5px rgba(8,8,8,.4); 
+        }
+      }
+
+      &.error-wrapper {
+        color: #FFCCCC;
+
+        &.hide {
+          display: none;
+        }
+
+        &.success {
+          color: lightblue;
         }
       }
     }

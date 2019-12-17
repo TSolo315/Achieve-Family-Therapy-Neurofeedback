@@ -4,8 +4,8 @@
 }
 
 .container {
-  width: calc(100% - 4.5em);
-  max-width: 1170px;
+  width: calc(100% - 4em);
+  max-width: 1444px;
   margin: 0 auto;
   border: 0;
 }
@@ -30,7 +30,7 @@
   bottom: 0;
   width: 100%;
   height: auto;
-  fill: #B23850;
+  fill: color('loud', 'dark');
   stroke: none;
 
   @include breakpoint('extra large') {
@@ -85,7 +85,7 @@
   color: black;
   max-width: 800px;
   margin: 50px auto;
-  border-top: 6px solid color('base', 'secondary');
+  border-top: 6px solid color('base', 'primary');
   line-height: 1.6;
   box-shadow: 2px 2px 5px 0px #000;
 
@@ -110,7 +110,7 @@
       position: absolute;
       left: 15px;
       top: 12px;
-      color: color('base', 'secondary');
+      color: color('base', 'primary');
     }
     
     h5 {
@@ -145,4 +145,70 @@
     height: 0;
     overflow: hidden;
   }
+}
+
+.card-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+
+  &-vertical {
+    flex-direction: column;
+    // align-items: center;
+    margin-left: 1.5em;
+  }
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+  transition: 0.3s;
+  background-color: transparent;
+  color: white;
+  border: dashed 3px white;
+  margin: 3em 0em 0em 1.5em;
+  max-width: 406px;
+  flex-grow: 1;
+
+  h4, p {
+    margin-bottom: .5em;
+  }
+
+  img {
+    border-radius: 3px 3px 0 0;
+  }
+
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+  }
+
+  &--container {
+    padding: 4px 16px;
+    max-width: 406px;
+  }
+
+  &.big {
+    max-width: 806px;
+    flex-grow: 2;
+    
+    .card--container {
+      max-width: 806px;
+    }
+  }
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("/images/ptest.png");
+
+  // /* Set a specific height */
+  // height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
