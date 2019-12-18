@@ -486,7 +486,12 @@ body h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 1.5em;
+}
+
+@media (min-width: 1200px) {
+  .card-wrapper-vertical {
+    margin-left: 1.5em;
+  }
 }
 
 .card {
@@ -498,11 +503,8 @@ body h1 {
   background-color: transparent;
   color: white;
   border: dashed 3px white;
-  margin: 3em 0em 0em 1.5em;
-  max-width: 406px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  margin: 3em 0em 0em 0em;
+  max-width: 306px;
 }
 
 .card h4, .card p {
@@ -518,25 +520,95 @@ body h1 {
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
 }
 
+@media (min-width: 576px) {
+  .card {
+    max-width: 406px;
+    margin: 3em 0em 0em 1.5em;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 606px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    max-width: 406px;
+  }
+}
+
 .card--container {
   padding: 4px 16px;
-  max-width: 406px;
+  max-width: 306px;
+}
+
+@media (min-width: 576px) {
+  .card--container {
+    max-width: 406px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card--container {
+    max-width: 606px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card--container {
+    max-width: 406px;
+  }
 }
 
 .card.big {
-  max-width: 806px;
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  max-width: 306px;
 }
 
 .card.big .card--container {
-  max-width: 806px;
+  max-width: 306px;
+}
+
+@media (min-width: 576px) {
+  .card.big .card--container {
+    max-width: 406px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card.big .card--container {
+    max-width: 606px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card.big .card--container {
+    max-width: 806px;
+  }
+}
+
+@media (min-width: 576px) {
+  .card.big {
+    max-width: 406px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card.big {
+    max-width: 606px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card.big {
+    max-width: 806px;
+  }
 }
 
 .parallax {
   /* The image used */
-  background-image: url("/images/ptest.png");
+  background-image: url("/images/ptest2000.jpg");
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -1081,10 +1153,52 @@ body h1 {
 }
 
 #about-us {
-  height: 2160px;
+  height: 185em;
   background-color: #3e4658;
   position: relative;
   padding-bottom: 175px;
+}
+
+@media (min-width: 376px) {
+  #about-us {
+    height: 180em;
+  }
+}
+
+@media (min-width: 426px) {
+  #about-us {
+    height: 180em;
+  }
+}
+
+@media (min-width: 576px) {
+  #about-us {
+    height: 160em;
+  }
+}
+
+@media (min-width: 768px) {
+  #about-us {
+    height: 150em;
+  }
+}
+
+@media (min-width: 992px) {
+  #about-us {
+    height: 153em;
+  }
+}
+
+@media (min-width: 1200px) {
+  #about-us {
+    height: 156em;
+  }
+}
+
+@media (min-width: 1440px) {
+  #about-us {
+    height: 105em;
+  }
 }
 
 #self-care {
@@ -1230,11 +1344,75 @@ body h1 {
 }
 
 .image-s3 {
-  display: block;
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .image-s3 {
+    display: block;
+  }
 }
 
 @media (min-width: 768px) {
   .image-s3 {
+    display: none;
+  }
+}
+
+.image-s4 {
+  display: block;
+}
+
+@media (min-width: 576px) {
+  .image-s4 {
+    display: none;
+  }
+}
+
+.image-z0 {
+  display: block;
+}
+
+@media (min-width: 576px) {
+  .image-z0 {
+    display: none;
+  }
+}
+
+.image-z1 {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .image-z1 {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-z1 {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .image-z1 {
+    display: block;
+  }
+}
+
+.image-z2 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .image-z2 {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .image-z2 {
     display: none;
   }
 }

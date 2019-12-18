@@ -156,8 +156,10 @@
 
   &-vertical {
     flex-direction: column;
-    // align-items: center;
-    margin-left: 1.5em;
+
+    @include breakpoint('larger') {
+      margin-left: 1.5em;
+    }
   }
 }
 
@@ -168,9 +170,9 @@
   background-color: transparent;
   color: white;
   border: dashed 3px white;
-  margin: 3em 0em 0em 1.5em;
-  max-width: 406px;
-  flex-grow: 1;
+  margin: 3em 0em 0em 0em;
+  max-width: 306px;
+  // flex-grow: 1;
 
   h4, p {
     margin-bottom: .5em;
@@ -183,17 +185,66 @@
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
   }
+  
+  @include breakpoint('small') {
+    max-width: 406px;
+    margin: 3em 0em 0em 1.5em;
+  }
 
-  &--container {
-    padding: 4px 16px;
+  @include breakpoint('medium') {
+    max-width: 606px;
+  }
+
+  @include breakpoint('larger') {
     max-width: 406px;
   }
 
+  &--container {
+    padding: 4px 16px;
+    max-width: 306px;
+
+    @include breakpoint('small') {
+      max-width: 406px;
+    }
+
+    @include breakpoint('medium') {
+      max-width: 606px;
+    }
+
+    @include breakpoint('larger') {
+      max-width: 406px;
+    }
+  }
+
   &.big {
-    max-width: 806px;
-    flex-grow: 2;
+    max-width: 306px;
+    // flex-grow: 2;
     
     .card--container {
+      max-width: 306px;
+
+      @include breakpoint('small') {
+        max-width: 406px;
+      }
+
+      @include breakpoint('medium') {
+        max-width: 606px;
+      }
+
+      @include breakpoint('larger') {
+        max-width: 806px;
+      }
+    }
+
+    @include breakpoint('small') {
+      max-width: 406px;
+    }
+
+    @include breakpoint('medium') {
+      max-width: 606px;
+    }
+
+    @include breakpoint('larger') {
       max-width: 806px;
     }
   }
@@ -201,7 +252,7 @@
 
 .parallax {
   /* The image used */
-  background-image: url("/images/ptest.png");
+  background-image: url("/images/ptest2000.jpg");
 
   // /* Set a specific height */
   // height: 500px;

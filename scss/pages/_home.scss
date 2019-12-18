@@ -1,16 +1,36 @@
 #about-us {
-  height: 2160px;
+  height: 185em;
   background-color: color('loud', 'darker');
   position: relative;
   padding-bottom: 175px;
 
-  // @include breakpoint('cellsmall') {
-  //   height: 975px;
-  // }
+  @include breakpoint('cellsmall') {
+    height: 180em;
+  }
 
-  // @include breakpoint('medium') {
-  //   height: 950px;
-  // }
+  @include breakpoint('cellbig') {
+    height: 180em;
+  }
+
+  @include breakpoint('small') {
+    height: 160em;
+  }
+
+  @include breakpoint('medium') {
+    height: 150em;
+  }
+
+  @include breakpoint('large') {
+    height: 153em;
+  }
+
+  @include breakpoint('larger') {
+    height: 156em;
+  }
+
+  @include breakpoint('laptop') {
+    height: 105em;
+  }
 
 }
 
@@ -131,9 +151,57 @@
 }
 
 .image-s3 {
-  display: block;
+  display: none;
+
+  @include breakpoint('small') {
+    display: block;
+  }
   
   @include breakpoint('medium') {
+    display: none;
+  }
+}
+
+.image-s4 {
+  display: block;
+  
+  @include breakpoint('small') {
+    display: none;
+  }
+}
+
+.image-z0 {
+  display: block;
+
+  @include breakpoint('small') {
+    display: none;
+  }
+}
+
+.image-z1 {
+  display: none;
+
+  @include breakpoint('small') {
+    display: block;
+  }
+
+  @include breakpoint('medium') {
+    display: none;
+  }
+
+  @include breakpoint('larger') {
+    display: block;
+  }
+}
+
+.image-z2 {
+  display: none;
+  
+  @include breakpoint('medium') {
+    display: block;
+  }
+
+  @include breakpoint('larger') {
     display: none;
   }
 }
