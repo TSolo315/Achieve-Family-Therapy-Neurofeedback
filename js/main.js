@@ -78,6 +78,80 @@ $(function() {
     $hamburger.toggleClass("is-active");
     $navbar.toggleClass("burger-open")
   });
+  // Navigation Scrolling
+  $("nav").find(".navbar--link").click(function(e) {
+    e.preventDefault();
+    var section = $(this).children().attr("href");
+      $("html, body").animate({
+          scrollTop: ($(section).offset().top - 70),
+      }, 1100);
+  });
+  $(".hero-button").on("click", (e) => {
+    e.preventDefault();
+    var section = '#about-us'
+      $("html, body").animate({
+          scrollTop: ($(section).offset().top - 70),
+      }, 1200);
+  });
+  $(".ghost-button").on("click", (e) => {
+    e.preventDefault();
+    var section = '#contact-us'
+      $("html, body").animate({
+          scrollTop: ($(section).offset().top - 70),
+      }, 1200);
+  });
+  $(".double-up").on("click", (e) => {
+    e.preventDefault();
+    var section = '#hero-top'
+      $("html, body").animate({
+          scrollTop: ($(section).offset().top - 70),
+      }, 1200);
+  });
+  // Nav buttons highlight based on page position
+  var $contactUsSection = $("#contact-us")
+  var $navContactUs = $('#nav-contact')
+  var $faqSection = $("#frequently-asked-questions")
+  var $navFaq = $('#nav-faq')
+  var $packageSection = $("#package-options")
+  var $navPackage = $('#nav-package')
+  var $selfCareSection = $("#self-care")
+  var $navSelfCare = $('#nav-self-care')
+  var $aboutUsSection = $("#about-us")
+  var $navAboutUs = $('#nav-about-us')
+  var $navHome = $('#nav-intro')
+  $(window).on( "scroll", () => {
+    if ( $(window).scrollTop() >= ($contactUsSection.offset().top - 70 )) {
+      $navContactUs.addClass("active");
+      $navFaq.removeClass("active");
+      return
+  }
+    if ( $(window).scrollTop() >= ($faqSection.offset().top - 70 )) {
+        $navFaq.addClass("active");
+        $navPackage.removeClass("active");
+        $navContactUs.removeClass("active");
+        return
+    }
+    if ( $(window).scrollTop() >= ($packageSection.offset().top - 70)) {
+        $navPackage.addClass("active");
+        $navSelfCare.removeClass("active")
+        $navFaq.removeClass("active");
+        return
+    }
+    if ( $(window).scrollTop() >= ($selfCareSection.offset().top - 70)) {
+        $navSelfCare.addClass("active");
+        $navAboutUs.removeClass("active");
+        $navPackage.removeClass("active");
+        return
+    }
+    if ( $(window).scrollTop() >= ($aboutUsSection.offset().top - 70)) {
+        $navAboutUs.addClass("active");
+        $navHome.removeClass("active");
+        $navSelfCare.removeClass("active")
+        return
+    }
+    $navHome.addClass("active");
+    $navAboutUs.removeClass("active");
+  });
   // Self Care Widget
  const $selfCareCirclesContainer = $(".reactive-icons-wrapper");
  const $selfCareReactionCircle = $("#self-care-result-circle");
@@ -206,8 +280,5 @@ $(function() {
         $errorContainer.removeClass('hide');
       }
     });
-    // $errorMessage.text('Thank you ' + contactName.split(" ")[0] + ', your message has been sent.')
-    // $errorContainer.addClass('success');
-    // $errorContainer.removeClass('hide');
   })
 })

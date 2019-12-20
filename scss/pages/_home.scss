@@ -189,7 +189,7 @@
     display: none;
   }
 
-  @include breakpoint('larger') {
+  @include breakpoint('laptop') {
     display: block;
   }
 }
@@ -201,7 +201,7 @@
     display: block;
   }
 
-  @include breakpoint('larger') {
+  @include breakpoint('laptop') {
     display: none;
   }
 }

@@ -502,7 +502,7 @@ body h1 {
   transition: 0.3s;
   background-color: transparent;
   color: white;
-  border: dashed 3px white;
+  border: solid 3px white;
   margin: 3em 0em 0em 0em;
   max-width: 306px;
 }
@@ -533,7 +533,7 @@ body h1 {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .card {
     max-width: 406px;
   }
@@ -556,7 +556,7 @@ body h1 {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .card--container {
     max-width: 406px;
   }
@@ -642,7 +642,7 @@ body h1 {
 .hero-button {
   background-color: #1465c5;
   padding: 1em;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Playfair Display", serif;
   font-weight: 500;
   color: white;
@@ -659,13 +659,13 @@ body h1 {
 
 @media (min-width: 768px) {
   .hero-button {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 992px) {
   .hero-button {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
@@ -933,12 +933,31 @@ body h1 {
   height: 228px;
 }
 
+@media (min-width: 768px) {
+  .navbar.burger-open .navbar--links {
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    position: static;
+    display: block;
+  }
+}
+
 .navbar.burger-open .navbar--link {
   position: relative;
   width: 100%;
   padding: 0;
   margin: .5em 0em 0em 1.5em;
   text-align: left;
+}
+
+@media (min-width: 768px) {
+  .navbar.burger-open .navbar--link {
+    width: auto;
+    margin: 1em .6em 1em .6em;
+    padding: 1em;
+    text-align: center;
+  }
 }
 
 .navbar--links {
@@ -972,6 +991,11 @@ body h1 {
   transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 
+.navbar--link a {
+  color: inherit !important;
+  text-decoration: none;
+}
+
 @media (min-width: 768px) {
   .navbar--link {
     margin: 1em .6em 1em .6em;
@@ -987,11 +1011,12 @@ body h1 {
 .navbar--link:hover {
   -webkit-transform: translate(0px, -0.25em);
           transform: translate(0px, -0.25em);
-  color: #5d6985;
+  color: #1465c5;
+  font-weight: 700;
 }
 
 .navbar--link.active {
-  color: #5d6985;
+  color: #1465c5;
   font-weight: 700;
 }
 
@@ -1138,10 +1163,10 @@ body h1 {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url("/images/braininhandhero1920x1163.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: url("/images/braininhandhero1920x1163.jpg"), url("/images/braininhandhero1920x1163resize2.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
 }
 
 .hero--text-container {
@@ -1395,7 +1420,7 @@ body h1 {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .image-z1 {
     display: block;
   }
@@ -1411,7 +1436,7 @@ body h1 {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .image-z2 {
     display: none;
   }

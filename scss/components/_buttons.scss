@@ -24,7 +24,7 @@
   background-color: color('primary', 'dark');
   // background-color: transparent;
   padding: 1em;
-  font-size: 20px;
+  font-size: 18px;
   font-family: $heading-font-family;
   font-weight: 500;
   color: color('quiet', 'light');
@@ -40,11 +40,11 @@
   
 
   @include breakpoint('medium') {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   @include breakpoint('large') {
-    font-size: 24px;
+    font-size: 22px;
   }
   
   i {

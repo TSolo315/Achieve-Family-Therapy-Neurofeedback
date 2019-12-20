@@ -35,6 +35,14 @@
       margin: 0;
       padding: 0;
       height: 228px;
+
+      @include breakpoint("medium") {
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        position: static;
+        display: block
+      }
     }
 
     .navbar--link {
@@ -43,6 +51,13 @@
       padding: 0;
       margin: .5em 0em 0em 1.5em;
       text-align: left;
+
+      @include breakpoint("medium") {
+        width: auto;
+        margin: 1em .6em 1em .6em;
+        padding: 1em; 
+        text-align:center;
+      }
     }
   }
 
@@ -69,6 +84,11 @@
     padding: 1em; 
     text-align:center;
     transition: transform 0.3s linear;
+    
+    a { 
+      color: inherit!important;
+      text-decoration: none;
+     } 
 
     @include breakpoint('medium') {
       margin: 1em .6em 1em .6em;
@@ -80,11 +100,12 @@
 
     &:hover {
       transform: translate(0px, -.25em);
-      color: color('loud', 'dark');
+      color: color('primary', 'dark');
+      font-weight: $font-bold;
     }
 
    &.active {
-     color: color('loud', 'dark');
+     color: color('primary', 'dark');
      font-weight: $font-bold;
    }
   }

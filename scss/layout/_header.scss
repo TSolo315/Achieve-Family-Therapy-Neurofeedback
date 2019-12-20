@@ -9,10 +9,10 @@
   position: relative;
   width:100%;
   height:100%;
-  background-image: url("/images/braininhandhero1920x1163.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; 
+  background-image: url("/images/braininhandhero1920x1163.jpg"), url("/images/braininhandhero1920x1163resize2.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, center; 
 
   &--text-container {
     position: absolute;

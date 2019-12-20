@@ -169,7 +169,7 @@
   transition: 0.3s;
   background-color: transparent;
   color: white;
-  border: dashed 3px white;
+  border: solid 3px white;
   margin: 3em 0em 0em 0em;
   max-width: 306px;
   // flex-grow: 1;
@@ -195,7 +195,7 @@
     max-width: 606px;
   }
 
-  @include breakpoint('larger') {
+  @include breakpoint('laptop') {
     max-width: 406px;
   }
 
@@ -211,7 +211,7 @@
       max-width: 606px;
     }
 
-    @include breakpoint('larger') {
+    @include breakpoint('laptop') {
       max-width: 406px;
     }
   }
