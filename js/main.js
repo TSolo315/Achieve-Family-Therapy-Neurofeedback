@@ -69,6 +69,12 @@ $.phone_number_validation = function(phone) {
   return regex.test(phone);
 }
 
+function scrollToArea (section) {
+  $("html, body").animate({
+      scrollTop: ($(section).offset().top - 70),
+  }, 1000);
+}
+
 
 $(function() {
   // Hamburger Menu
@@ -81,31 +87,19 @@ $(function() {
   // Navigation Scrolling
   $("nav").find(".navbar--link").click(function(e) {
     e.preventDefault();
-    var section = $(this).children().attr("href");
-      $("html, body").animate({
-          scrollTop: ($(section).offset().top - 70),
-      }, 1100);
+    scrollToArea($(this).children().attr("href"));
   });
   $(".hero-button").on("click", (e) => {
     e.preventDefault();
-    var section = '#about-us'
-      $("html, body").animate({
-          scrollTop: ($(section).offset().top - 70),
-      }, 1200);
+    scrollToArea('#about-us');
   });
   $(".ghost-button").on("click", (e) => {
     e.preventDefault();
-    var section = '#contact-us'
-      $("html, body").animate({
-          scrollTop: ($(section).offset().top - 70),
-      }, 1200);
+    scrollToArea('#contact-us');
   });
   $(".double-up").on("click", (e) => {
     e.preventDefault();
-    var section = '#hero-top'
-      $("html, body").animate({
-          scrollTop: ($(section).offset().top - 70),
-      }, 1200);
+    scrollToArea('#hero-top');
   });
   // Nav buttons highlight based on page position
   var $contactUsSection = $("#contact-us")
@@ -214,13 +208,13 @@ $(function() {
       $quizQuestion.text(quizSession.questions[quizSession.progress]);
       } else {
         if (quizSession.score <= 19) {
-          var resultMessage = "\n\n Good news! There are areas where you can improve your self-care. We offer a 2 day a week program package that includes one 45 minute Nuerofeedback session plus mindfulness practice and self-care tools and one 45 minute therapy session for targeting therapeutic goals."
+          var resultMessage = "\n\n A score in this range suggests there are some deficits in your overall self-care. The good news is that there are areas that you can improve. Review the 5 categories of self-care and set goals that will create a more balanced routine.  If you are looking for help. we offer a two day a week program package that includes one 45 minute neurofeedback session plus mindfulness practice and self-care tools and one 45 minute therapy session for targeting obstacles."
         } else if (quizSession.score <= 29) {
-          var resultMessage = "\n\n Good news! There are areas where you can improve your self-care. Our self-care package is a great way to help your journey toward a more complete self-care routine.  Consider beginning with our self-care program and adding some additional therapy sessions for additional support."
+          var resultMessage = "\n\n A score in this range indicates there are areas where you can improve your self-care.  Often people may have been taught to feel guilty about taking time for themselves. Taking time to address physical, emotional, spiritual, intellectual and social needs is imperative to your overall health.  Consider reviewing these questions again and make some goals to address areas that you may have been neglecting.  Participating in our self-care program will help guide you through the process of creating a complete self-care routine."
         } else if (quizSession.score <= 39) {
-          var resultMessage = "\n\n Congratulations you have some good self-care strategies already established. You may benefit from exploring our Self-Care Package which includes 10 Nuerofeedback sessions combined with Evidenced Based Tools including Mindfulness and Solution Focused strategies."
+          var resultMessage = "\n\n A score in this range indicates your self-care is somewhat complete.  There are areas where you may increase or add to your self-care routine.  Review the questions and determine if you would like to set goals to grow your self-care.  Adding Neurofeedback can help improve your intellectual and emotional self-care -- our self-care package would be the perfect place to start."
         } else {
-          var resultMessage = "\n\n Congratulations you have established some excellent self-care strategies! Consider adding Nuerofeedback sessions to complete your Self-Care. Treat yourself to brain training today."
+          var resultMessage = "\n\n A score in this range signifies you have established some excellent self-care strategies! Consider adding Nuerofeedback sessions to enhance your intellectual and emotional self-Care. Treat yourself to brain training today."
         }
         $quizQuestion.multiline("Quiz Complete! Your score is: " + quizSession.score + resultMessage);
         $quizAnswers.hide();

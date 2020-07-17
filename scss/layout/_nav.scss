@@ -100,12 +100,12 @@
 
     &:hover {
       transform: translate(0px, -.25em);
-      color: color('primary', 'dark');
-      font-weight: $font-bold;
+      color: color('base', 'secondary');
+      // font-weight: $font-bold;
     }
 
    &.active {
-     color: color('primary', 'dark');
+     color: color('base', 'secondary');
      font-weight: $font-bold;
    }
   }

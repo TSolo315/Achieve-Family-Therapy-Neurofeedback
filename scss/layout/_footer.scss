@@ -1,0 +1,44 @@
+.footer-logo-container {
+  text-align: center;
+  margin-top: .5em;
+}
+
+.footer-slogan {
+  text-align: center;
+  margin-top: 1em;
+  font-size: 15px;
+  // padding-left: 50px;
+
+  @include breakpoint('small') {
+    font-size: 18px;
+    padding-left: 50px;
+  }
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 10px;
+  // padding-left: 50px;
+
+  @include breakpoint('small') {
+    font-size: 12px;
+    padding-left: 50px;
+  }
+}
+
+.footer-image-1 {
+  display: inline-block;
+
+  @include breakpoint('small') {
+    display: none;
+  }
+}
+
+.footer-image-2 {
+  display: none;
+
+  @include breakpoint('small') {
+    display: inline-block;
+  }
+}

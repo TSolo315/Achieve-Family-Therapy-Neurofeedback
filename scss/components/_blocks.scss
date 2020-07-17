@@ -4,10 +4,14 @@
 }
 
 .container {
-  width: calc(100% - 4em);
   max-width: 1444px;
   margin: 0 auto;
   border: 0;
+  width: calc(100% - 2em);
+
+  @include breakpoint('small') {
+  width: calc(100% - 4em)
+  }
 }
 
 #blue-curve {
@@ -30,7 +34,7 @@
   bottom: 0;
   width: 100%;
   height: auto;
-  fill: color('loud', 'dark');
+  fill: color('base', 'newblue');
   stroke: none;
 
   @include breakpoint('extra large') {
@@ -252,7 +256,7 @@
 
 .parallax {
   /* The image used */
-  background-image: url("/images/ptest2000.jpg");
+  background-image: url("/images/paraback1.jpg");
 
   // /* Set a specific height */
   // height: 500px;

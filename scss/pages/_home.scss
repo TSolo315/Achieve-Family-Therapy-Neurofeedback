@@ -1,132 +1,181 @@
 #about-us {
-  height: 185em;
+  height: 195em;
   background-color: color('loud', 'darker');
   position: relative;
   padding-bottom: 175px;
 
   @include breakpoint('cellsmall') {
-    height: 180em;
+    height: 195em;
   }
 
   @include breakpoint('cellbig') {
-    height: 180em;
+    height: 194em;
   }
 
   @include breakpoint('small') {
-    height: 160em;
+    height: 174em;
   }
 
   @include breakpoint('medium') {
-    height: 150em;
+    height: 170em;
   }
 
   @include breakpoint('large') {
-    height: 153em;
+    height: 172em;
   }
 
   @include breakpoint('larger') {
-    height: 156em;
+    height: 174em;
   }
 
   @include breakpoint('laptop') {
-    height: 105em;
+    height: 110em;
   }
 
 }
 
 #self-care {
-  height: 1000px;
+  height: 80em;
   background-color: color('base', 'primary');
   position: relative;
   padding-bottom: 175px;
 
   @include breakpoint('cellsmall') {
-    height: 975px;
+    height: 78em;
+  }
+
+  @include breakpoint('cellbig') {
+    height: 74em;
+  }
+
+  @include breakpoint('small') {
+    height: 66em;
   }
 
   @include breakpoint('medium') {
-    height: 950px;
+    height: 62em;
+  }
+
+  @include breakpoint('large') {
+    height: 60em;
+  }
+
+  @include breakpoint('larger') {
+    height: 59em;
   }
 
 }
 
 #self-care-quiz {
-  height: 925px;
-  background-color: color('loud', 'dark');
+  height: 62em;
+  background-color: color('base', 'newblue');
   position: relative;
   padding-bottom: 175px;
 
-  @include breakpoint('cellsmall') {
-    height: 875px;
+  @include breakpoint('cellbig') {
+    height: 60em;
   }
 
   @include breakpoint('small') {
-    height: 700px;
+    height: 51em;
   }
 
   @include breakpoint('medium') {
-    height: 1080px;
+    height: 48em;
+  }
+
+  @include breakpoint('large') {
+    height: 46em;
+  }
+
+  @include breakpoint('larger') {
+    height: 50em;
   }
 
 }
 
 #package-options {
-  height: 1080px;
+  height: 140em;
   background-color: color('loud', 'darker');
   position: relative;
   // padding-bottom: 175px;
 
+  @include breakpoint('cellsmall') {
+    height: 138em;
+  }
+
+  @include breakpoint('cellbig') {
+    height: 132em;
+  }
+
+  @include breakpoint('small') {
+    height: 130em;
+  }
+
+  @include breakpoint('large') {
+    height: 60em;
+  }
+
   @include breakpoint('larger') {
-    height: 1080px;
+    height: 64em;
+  }
+
+  @include breakpoint('laptop') {
+    height: 66em;
   }
 }
 
 #frequently-asked-questions {
-  height: 1220px;
+  height: 120em;
   background-color: color('base','secondary');
   // background-image: url("/images/darkhoneycombbackground.png");
   position: relative;
 
+  @include breakpoint('cellsmall') {
+    height: 110em;
+  }
+
   @include breakpoint('cellbig') {
-    height: 1200px;
+    height: 94em;
   }
 
   @include breakpoint('small') {
-    height: 1180px;
-  }
-
-  @include breakpoint('medium') {
-    height: 1160px;
-  }
-
-  @include breakpoint('large') {
-    height: 1140px;
+    height: 78em;
   }
 
   @include breakpoint('larger') {
-    height: 1120px;
+    height: 68em;
+  }
+
+  @include breakpoint('laptop') {
+    height: 66em;
   }
 }
 
 #contact-us {
-  height: 900px;
+  height: 54em;
   background-color: color('loud', 'darker');
   position: relative;
   // padding-bottom: 175px;
 
-  @include breakpoint('larger') {
-    height: 850px;
+  @include breakpoint('small') {
+    height: 48em;
   }
+
+  @include breakpoint('larger') {
+    height: 52em;
+  }
+
 }
 
 #footer {
-  height: 150px;
+  height: 16.5em;
   background-color: color('loud', 'base');
   position: relative;
   // padding-bottom: 175px;
 
-  @include breakpoint('larger') {
-    height: 150px;
+  @include breakpoint('small') {
+    height: 16em;
   }
 }
 
@@ -262,14 +311,14 @@
   position: absolute;
   color: color('type', 'ww');
   top: 80%;
-  left: 6%;
+  left: -3%;
 
   @include breakpoint('cellsmall') {
-    left: 11%;
+    left: 3%;
   }
 
   @include breakpoint('cellbig') {
-    left: 11%;
+    left: 9%;
   }
 
   @include breakpoint('small') {
@@ -454,7 +503,7 @@
   }
 
   @include breakpoint('medium') {
-    top: 0%;
+    top: 0;
     left: 40%;
     background-position: 10px 15px;
   }
@@ -744,12 +793,13 @@
     height: 550px;
     margin: 0 auto;
     width: 60%;
-    padding: 2em 2em;
+    // padding: 2em 2em;
 
     @include breakpoint('large') {
       display: inline-block;
       flex-basis: 0;
       flex: 1 1 0px;
+      padding: 2em 2em;
     }
 
     &:nth-child(2) {
@@ -775,8 +825,33 @@
       }
     }
 
+    .package-title {
+      margin-left: -.25em;
+      margin-top: 1em;
+
+      @include breakpoint('small') {
+        margin-left: 0;
+      }
+
+      @include breakpoint('large') {
+        margin-top: 0;
+      }
+    }
+
+    .package-price {
+      margin-left: -.25em;
+      margin-top: .5em;
+      font-family: $body-font-family;
+      font-weight: 300;
+
+      strike {
+        color: color('base', 'newblue');
+      }
+    }
+
     .package-description {
       margin-top: 3em;
+      padding-bottom: .25em;
     }
   }
 }
@@ -869,14 +944,18 @@
 
       input[type=submit] {
         flex-basis: 10%;
-        margin: auto 31.5%;
-        padding: 10px 40px;
+        margin: auto 30%;
+        padding: 10px 15px;
         background-color: transparent;
         color: color('type', 'ww');
         border: 3px solid color('type', 'ww');
         border-radius: 6px;
         cursor: pointer;
-        // transition: color .5s, border .5s;
+
+        @include breakpoint('small') {
+          padding: 10px 40px;
+          margin: auto 31.5%;
+        }
 
         &:hover {
           border: 3px solid color('base', 'quiet');

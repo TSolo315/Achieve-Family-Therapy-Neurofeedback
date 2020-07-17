@@ -4,7 +4,7 @@
   justify-self: center;
   padding: 1em;
   margin: 0 auto;
-  margin-top: 3em;
+  margin-top: 10em;
   font-size: 22px;
   color: #fff;
   border: 3px solid #fff;
@@ -14,6 +14,18 @@
   text-decoration: none;
   cursor: pointer;
 
+  @include breakpoint('cellbig') {
+    margin-top: 5em;
+  }
+
+  @include breakpoint('small') {
+    margin-top: 3em;
+  }
+
+  // @include breakpoint('larger') {
+  //   margin-top: 6em;
+  // }
+
   &:hover {
     border-color: color('base', 'quiet');
     color: color('base', 'quiet');
@@ -22,8 +34,7 @@
 
 .hero-button {
   background-color: color('primary', 'dark');
-  // background-color: transparent;
-  padding: 1em;
+  padding: .85em;
   font-size: 18px;
   font-family: $heading-font-family;
   font-weight: 500;
@@ -52,9 +63,9 @@
   }
 
   &:hover {
-    background-color: darken(color('primary', 'base'),5%);
-    border: 3px solid darken(color('primary', 'base'),5%);
-    box-shadow: 1px 1px 1px color('primary', 'dark');
+    background-color: lighten(color('primary', 'dark'),5%);
+    border: 3px solid lighten(color('primary', 'dark'),5%);
+    box-shadow: 1px 1px 1px color('primary', 'darker');
     i {
       transform: rotateZ(90deg);
     }
@@ -202,8 +213,8 @@
 /* */
 
 .button.blue{
-  background-color: color('base', 'primary');
-  border-color: color('base', 'primary');
+  background-color: lighten(color('base','primary'), 7%);
+  border-color: lighten(color('base','primary'), 7%);
 }
 
 .button.blue:hover{
